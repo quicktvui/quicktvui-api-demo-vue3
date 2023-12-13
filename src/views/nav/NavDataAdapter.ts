@@ -4,6 +4,8 @@ import {
   QTWaterfallSection,
   QTWaterfallSectionType
 } from "@quicktvui/quicktvui3";
+import ESModulePageList from "../../components/es-module";
+import QTAPINavPageList from "./index";
 
 export function buildNavWaterfall(): QTWaterfall {
   let waterfall: QTWaterfall = {
@@ -28,20 +30,45 @@ function buildComponentSection(): QTWaterfallSection {
     type: QTWaterfallSectionType.QT_WATERFALL_SECTION_TYPE_FLEX,
     title: '组件',
     titleStyle: {
-      width: 1920,
+      width: 1740,
       height: 60,
-      marginLeft: 90,
       marginTop: 40,
       marginBottom: 40,
     },
-    itemList: [],
+    itemList: buildComponentItemList(),
     style: {
-      width: 1920,
+      width: 1740,
       height: -1,
-    }
+    },
+    decoration: {
+      left: 90,
+      right: 90,
+    },
   }
   return section
 }
+
+function buildComponentItemList(): Array<QTWaterfallItem> {
+  console.log('------------buildComponentItemList----start--------->>>>', QTAPINavPageList)
+  const itemList = Object.keys(QTAPINavPageList).map(data => ({
+    id: data,
+    name: QTAPINavPageList[data].name,
+    style: {
+      width: 250,
+      height: 80
+    },
+    decoration: {
+      left: 10,
+      right: 10,
+      top: 10,
+      bottom: 10,
+    },
+    type: 1
+  }))
+  console.log('------------buildComponentItemList-----end-------->>>>', itemList)
+  return itemList
+}
+
 
 //------------------------------------------------------------------
 function buildModuleSection(): QTWaterfallSection {
@@ -50,30 +77,40 @@ function buildModuleSection(): QTWaterfallSection {
     type: QTWaterfallSectionType.QT_WATERFALL_SECTION_TYPE_FLEX,
     title: '模块',
     titleStyle: {
-      width: 1920,
+      width: 1740,
       height: 60,
-      marginLeft: 90,
       marginTop: 40,
       marginBottom: 40,
     },
-    itemList: [],
+    itemList: buildModuleItemList(),
     style: {
-      width: 1920,
+      width: 1740,
       height: -1,
-    }
+    },
+    decoration: {
+      left: 90,
+      right: 90,
+    },
   }
   return section
 }
 
-function buildModuleItemList(object: Object): Array<QTWaterfallItem> {
-  let itemList: Array<QTWaterfallItem> = []
-
-  return itemList
-}
-
-function buildModuleItem(object: Object): Array<QTWaterfallItem> {
-  let itemList: Array<QTWaterfallItem> = []
-
+function buildModuleItemList(): Array<QTWaterfallItem> {
+  const itemList = Object.keys(ESModulePageList).map(data => ({
+    id: data,
+    name: ESModulePageList[data].name,
+    style: {
+      width: 250,
+      height: 80
+    },
+    decoration: {
+      left: 10,
+      right: 10,
+      top: 10,
+      bottom: 10,
+    },
+    type: 1
+  }))
   return itemList
 }
 
@@ -84,17 +121,41 @@ function buildFrameworkSection(): QTWaterfallSection {
     type: QTWaterfallSectionType.QT_WATERFALL_SECTION_TYPE_FLEX,
     title: '框架',
     titleStyle: {
-      width: 1920,
+      width: 1740,
       height: 60,
-      marginLeft: 90,
       marginTop: 40,
       marginBottom: 40,
     },
-    itemList: [],
+    itemList: buildFrameworkItemList(),
     style: {
-      width: 1920,
+      width: 1740,
       height: -1,
-    }
+    },
+    decoration: {
+      left: 90,
+      right: 90,
+    },
   }
   return section
+}
+
+function buildFrameworkItemList(): Array<QTWaterfallItem> {
+  console.log('------------buildFrameworkItemList-------start------>>>>', QTAPINavPageList)
+  const itemList = Object.keys(QTAPINavPageList).map(data => ({
+    id: data,
+    name: QTAPINavPageList[data].name,
+    style: {
+      width: 250,
+      height: 80
+    },
+    decoration: {
+      left: 10,
+      right: 10,
+      top: 10,
+      bottom: 10,
+    },
+    type: 1
+  }))
+  console.log('------------buildFrameworkItemList-------end------>>>>', itemList)
+  return itemList
 }

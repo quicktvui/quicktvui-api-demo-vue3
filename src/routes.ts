@@ -2,7 +2,6 @@ import index from "./views/index/index.vue";
 import error from "./views/error/index.vue";
 import splash from "./views/splash/index.vue";
 //
-import ESAPINavPageList from "./views/nav";
 import ESRouterESList from "./components/es-router/es";
 import ESComponentList from "./components/es-component";
 import ESTextViewComponentList from "./components/es-component/text-view";
@@ -36,7 +35,7 @@ import ESSoundPoolPlayerPageList from "./components/es-sound-pool-player"
 import ESM1905PlayerPageList from "./components/es-m1905-player"
 import ESGameCenterPageList from "./components/es-game-center"
 //
-import QTAPINavPageList from "./views/nav/index"
+import QTAPINavPageList from "./views/nav"
 import QTButtonPageList from "./components/qt-button"
 import QTGridViewPageList from "./components/qt-grid-view"
 import QTListViewPageList from "./components/qt-list-view"
@@ -81,11 +80,11 @@ const routes = [
     component: error,
     launchMode: 'standard',
   },
-  ...Object.keys(ESAPINavPageList)
+  ...Object.keys(QTAPINavPageList)
     .map(item => ({
       path: `/nav/${item}`,
       name: `nav/${item}`,
-      component: ESAPINavPageList[item].component,
+      component: QTAPINavPageList[item].component,
     })),
   ...Object.keys(ESRouterESList)
     .map(item => ({
@@ -278,12 +277,6 @@ const routes = [
       path: `/game/${item}`,
       name: `game/${item}`,
       component: ESGameCenterPageList[item].component,
-    })),
-  ...Object.keys(QTAPINavPageList)
-    .map(item => ({
-      path: `/nav/${item}`,
-      name: `nav/${item}`,
-      component: QTAPINavPageList[item].component,
     })),
   ...Object.keys(QTViewPageList)
     .map(item => ({
