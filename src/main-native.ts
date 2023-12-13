@@ -20,11 +20,34 @@ import {install} from './components';
 
 app.use(install);
 
+//----------------------------------------------------------
 import {ESComponent} from "@extscreen/es3-component";
 
 app.use(ESComponent);
-
+//----------------------------------------------------------
 import {QuickTVUI} from "@quicktvui/quicktvui3";
 import '@quicktvui/quicktvui3/dist/index.css';
 
 app.use(QuickTVUI);
+
+//----------------------------------------------------------
+import {createESPlayer} from "@extscreen/es3-player";
+
+const player = createESPlayer();
+app.use(player);
+
+import {createESPlayerManager} from "@extscreen/es3-player-manager";
+
+const playerManager = createESPlayerManager()
+app.use(playerManager);
+
+import {createESVideoPlayer} from "@extscreen/es3-video-player";
+
+const videoPlayer = createESVideoPlayer();
+app.use(videoPlayer);
+
+import {createESADPlayer} from "@extscreen/es3-ad-player";
+
+const ADPlayer = createESADPlayer();
+app.use(ADPlayer);
+//----------------------------------------------------------
