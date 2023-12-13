@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-button-root-css"
+  <div class="nav-button-item-root-css"
        layout="${layout}"
        :focusable="true"
        :enableFocusBorder="true"
@@ -7,7 +7,7 @@
        eventClick
        eventFocus>
     <text-view
-      class="test_text_view_css"
+      class="nav-button-item-text-css"
       :duplicateParentState="true"
       :focusable="false"
       :textSize="25"
@@ -33,10 +33,7 @@ export default defineComponent({
 
 <style scoped>
 
-.nav-button-root-css {
-  width: 250px;
-  height: 80px;
-  margin: 20px;
+.nav-button-item-root-css {
   border-style: solid;
   border-color: #40b883;
   border-width: 2px;
@@ -47,7 +44,7 @@ export default defineComponent({
   focus-background-color: #40b883;
 }
 
-.test_text_view_css {
+.nav-button-item-text-css {
   width: 250px;
   height: 80px;
   font-size: 25px;

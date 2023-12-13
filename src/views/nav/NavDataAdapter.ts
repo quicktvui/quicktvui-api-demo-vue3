@@ -9,7 +9,7 @@ import {QTComponentNavPageList, QTFrameworkNavPageList} from './index'
 
 export function buildNavWaterfall(): QTWaterfall {
   let waterfall: QTWaterfall = {
-    width: 1920,
+    width: 1740,//TODO FIXME
     height: 1080
   }
   return waterfall
@@ -41,6 +41,7 @@ function buildComponentSection(): QTWaterfallSection {
       height: -1,
     },
     decoration: {
+      top: 100,
       left: 90,
       right: 90,
     },
@@ -132,6 +133,7 @@ function buildFrameworkSection(): QTWaterfallSection {
     decoration: {
       left: 90,
       right: 90,
+      bottom: 90
     },
   }
   return section
