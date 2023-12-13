@@ -7,7 +7,7 @@
         <s-nav-button
           v-for="item in pageList" :key="item.id"
           :text="item.name"
-          :url="`button/${item.id}`"/>
+          :url="`${item.id}`"/>
       </qt-view>
     </qt-view>
   </qt-view>

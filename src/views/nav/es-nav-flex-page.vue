@@ -9,7 +9,7 @@
           <s-nav-button
             v-for="(item, _) in directionList" :key="item.id"
             :text="item.name"
-            :url="`flex/${item.id}`"/>
+            :url="`${item.id}`"/>
         </div>
       </div>
       <div class="es-sdk-content-column-css">
@@ -18,7 +18,7 @@
           <s-nav-button
             v-for="(item, _) in wrapList" :key="item.id"
             :text="item.name"
-            :url="`flex/${item.id}`"/>
+            :url="`${item.id}`"/>
         </div>
       </div>
       <div class="es-sdk-content-column-css">
@@ -27,7 +27,7 @@
           <s-nav-button
             v-for="(item, _) in justifyContentList" :key="item.id"
             :text="item.name"
-            :url="`flex/${item.id}`"/>
+            :url="`${item.id}`"/>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
         <s-nav-button
           v-for="(item, _) in alignItemsList" :key="item.id"
           :text="item.name"
-          :url="`flex/${item.id}`"/>
+          :url="`${item.id}`"/>
       </div>
     </div>
     <div class="es-sdk-content-column-css">
@@ -46,7 +46,7 @@
         <s-nav-button
           v-for="(item, _) in alignContentList" :key="item.id"
           :text="item.name"
-          :url="`flex/${item.id}`"/>
+          :url="`${item.id}`"/>
       </div>
     </div>
   </div>

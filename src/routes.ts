@@ -82,315 +82,315 @@ const routes = [
   },
   ...Object.keys(QTComponentNavPageList)
     .map(item => ({
-      path: `/nav/${item}`,
-      name: `nav/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTComponentNavPageList[item].component,
     })),
   ...Object.keys(QTFrameworkNavPageList)
     .map(item => ({
-      path: `/nav/${item}`,
-      name: `nav/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTFrameworkNavPageList[item].component,
     })),
   ...Object.keys(ESRouterESList)
     .map(item => ({
-      path: `/router/${item}`,
-      name: `router/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESRouterESList[item].component,
     })),
   ...Object.keys(ESComponentList)
     .map(item => ({
-      path: `/component/${item}`,
-      name: `component/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESComponentList[item].component,
     })),
   ...Object.keys(ESTextViewComponentList)
     .map(item => ({
-      path: `/component/text/${item}`,
-      name: `component/text/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESTextViewComponentList[item].component,
     })),
   ...Object.keys(ESLoadingViewComponentList)
     .map(item => ({
-      path: `/component/loading/${item}`,
-      name: `component/loading/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESLoadingViewComponentList[item].component,
     })),
   ...Object.keys(ESWebViewComponentList)
     .map(item => ({
-      path: `/component/webview/${item}`,
-      name: `component/webview/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESWebViewComponentList[item].component,
     })),
   ...Object.keys(ESX5WebViewComponentList)
     .map(item => ({
-      path: `/component/x5webview/${item}`,
-      name: `component/x5webview/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESX5WebViewComponentList[item].component,
     })),
   ...Object.keys(ESSurfaceViewComponentList)
     .map(item => ({
-      path: `/component/surface/${item}`,
-      name: `component/surface/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESSurfaceViewComponentList[item].component,
     })),
   ...Object.keys(ESBaseComponentList)
     .map(item => ({
-      path: `/component/base/${item}`,
-      name: `component/base/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESBaseComponentList[item].component,
     })),
   ...Object.keys(ESComponentImgPageList)
     .map(item => ({
-      path: `/component/img/${item}`,
-      name: `component/img/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESComponentImgPageList[item].component,
     })),
   ...Object.keys(ESFlexDirectionPageList)
     .map(item => ({
-      path: `/flex/${item}`,
-      name: `flex/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESFlexDirectionPageList[item].component,
     })),
   ...Object.keys(ESFlexWrapPageList)
     .map(item => ({
-      path: `/flex/${item}`,
-      name: `flex/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESFlexWrapPageList[item].component,
     })),
   ...Object.keys(ESFlexJustifyContentPageList)
     .map(item => ({
-      path: `/flex/${item}`,
-      name: `flex/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESFlexJustifyContentPageList[item].component,
     })),
   ...Object.keys(ESFlexAlignItemsPageList)
     .map(item => ({
-      path: `/flex/${item}`,
-      name: `flex/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESFlexAlignItemsPageList[item].component,
     })),
   ...Object.keys(ESFlexAlignContentPageList)
     .map(item => ({
-      path: `/flex/${item}`,
-      name: `flex/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESFlexAlignContentPageList[item].component,
     })),
   ...Object.keys(ESPageLifecycleList)
     .map(item => ({
-      path: `/lifecycle/${item}`,
-      name: `lifecycle/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESPageLifecycleList[item].component,
     })),
   ...Object.keys(ESModulePageList)
     .map(item => ({
-      path: `/module/${item}`,
-      name: `module/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESModulePageList[item].component,
     })),
   ...Object.keys(ESLogPageList)
     .map(item => ({
-      path: `/log/${item}`,
-      name: `log/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESLogPageList[item].component,
     })),
   ...Object.keys(ESKeyPageList)
     .map(item => ({
-      path: `/key/${item}`,
-      name: `key/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESKeyPageList[item].component,
     })),
   ...Object.keys(ESNetworkPageList)
     .map(item => ({
-      path: `/network/${item}`,
-      name: `network/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESNetworkPageList[item].component,
     })),
   ...Object.keys(ESRangeSeekbarPageList)
     .map(item => ({
-      path: `/component/rangeseekbar/${item}`,
-      name: `component/rangeseekbar/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESRangeSeekbarPageList[item].component,
     })),
   ...Object.keys(ESProgressBarComponentList)
     .map(item => ({
-      path: `/component/progressbar/${item}`,
-      name: `component/progressbar/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESProgressBarComponentList[item].component,
     })),
   ...Object.keys(ESSeekBarComponentList)
     .map(item => ({
-      path: `/component/seekbar/${item}`,
-      name: `component/seekbar/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESSeekBarComponentList[item].component,
     })),
   ...Object.keys(ESChartComponentList)
     .map(item => ({
-      path: `/component/chart/${item}`,
-      name: `component/chart/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESChartComponentList[item].component,
     })),
   ...Object.keys(ESAnimationPageList)
     .map(item => ({
-      path: `/animation/${item}`,
-      name: `animation/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESAnimationPageList[item].component,
     })),
   ...Object.keys(ESVideoPlayerPageList)
     .map(item => ({
-      path: `/video/${item}`,
-      name: `video/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESVideoPlayerPageList[item].component,
     })),
   ...Object.keys(ESAudioPlayerPageList)
     .map(item => ({
-      path: `/audio/${item}`,
-      name: `audio/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESAudioPlayerPageList[item].component,
     })),
   ...Object.keys(ESAudioServicePlayerPageList)
     .map(item => ({
-      path: `/audio-service/${item}`,
-      name: `audio-service/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESAudioServicePlayerPageList[item].component,
     })),
   ...Object.keys(ESSoundPoolPlayerPageList)
     .map(item => ({
-      path: `/sound-pool/${item}`,
-      name: `sound-pool/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESSoundPoolPlayerPageList[item].component,
     })),
   ...Object.keys(ESADPlayerPageList)
     .map(item => ({
-      path: `/ad/${item}`,
-      name: `ad/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESADPlayerPageList[item].component,
     })),
   ...Object.keys(ESPlayerManagerPageList)
     .map(item => ({
-      path: `/player-manager/${item}`,
-      name: `player-manager/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESPlayerManagerPageList[item].component,
     })),
   ...Object.keys(ESGameCenterPageList)
     .map(item => ({
-      path: `/game/${item}`,
-      name: `game/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ESGameCenterPageList[item].component,
     })),
   ...Object.keys(QTViewPageList)
     .map(item => ({
-      path: `/view/${item}`,
-      name: `view/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTViewPageList[item].component,
     })),
   ...Object.keys(QTTextPageList)
     .map(item => ({
-      path: `/text/${item}`,
-      name: `text/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTTextPageList[item].component,
     })),
   ...Object.keys(QTImagePageList)
     .map(item => ({
-      path: `/image/${item}`,
-      name: `image/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTImagePageList[item].component,
     })),
   ...Object.keys(QTRowPageList)
     .map(item => ({
-      path: `/row/${item}`,
-      name: `row/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTRowPageList[item].component,
     })),
   ...Object.keys(QTColumnPageList)
     .map(item => ({
-      path: `/column/${item}`,
-      name: `column/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTColumnPageList[item].component,
     })),
   ...Object.keys(QTButtonPageList)
     .map(item => ({
-      path: `/button/${item}`,
-      name: `button/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTButtonPageList[item].component,
     })),
   ...Object.keys(TextViewPageList)
     .map(item => ({
-      path: `/text-view/${item}`,
-      name: `text-view/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: TextViewPageList[item].component,
     })),
   ...Object.keys(QTGridViewPageList)
     .map(item => ({
-      path: `/grid-view/${item}`,
-      name: `grid-view/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTGridViewPageList[item].component,
     })),
   ...Object.keys(QTListViewPageList)
     .map(item => ({
-      path: `/list-view/${item}`,
-      name: `list-view/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTListViewPageList[item].component,
     })),
   ...Object.keys(QTPosterPageList)
     .map(item => ({
-      path: `/poster/${item}`,
-      name: `poster/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTPosterPageList[item].component,
     })),
   ...Object.keys(QTNavBarPageList)
     .map(item => ({
-      path: `/nav-bar/${item}`,
-      name: `nav-bar/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTNavBarPageList[item].component,
     })),
   ...Object.keys(QTWaterfallPageList)
     .map(item => ({
-      path: `/waterfall/${item}`,
-      name: `waterfall/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTWaterfallPageList[item].component,
     })),
   ...Object.keys(QTWaterfallItemPageList)
     .map(item => ({
-      path: `/waterfall/${item}`,
-      name: `waterfall/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTWaterfallItemPageList[item].component,
     })),
   ...Object.keys(QTWaterfallSectionPageList)
     .map(item => ({
-      path: `/waterfall/${item}`,
-      name: `waterfall/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTWaterfallSectionPageList[item].component,
     })),
   ...Object.keys(QTTabsWaterfallPageList)
     .map(item => ({
-      path: `/tabs-waterfall/${item}`,
-      name: `tabs-waterfall/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTTabsWaterfallPageList[item].component,
     })),
   ...Object.keys(QTTabsWaterfallSectionPageList)
     .map(item => ({
-      path: `/tabs-waterfall/${item}`,
-      name: `tabs-waterfall/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTTabsWaterfallSectionPageList[item].component,
     })),
 
   ...Object.keys(QTTabsWaterfallItemPageList)
     .map(item => ({
-      path: `/tabs-waterfall/${item}`,
-      name: `tabs-waterfall/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTTabsWaterfallItemPageList[item].component,
     })),
   ...Object.keys(QTClassifiedListViewPageList)
     .map(item => ({
-      path: `/classified-list-view/${item}`,
-      name: `classified-list-view/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: QTClassifiedListViewPageList[item].component,
     })),
   ...Object.keys(ExtendPageList)
     .map(item => ({
-      path: `/extend${item}`,
-      name: `extend/${item}`,
+      path: `/${item}`,
+      name: `${item}`,
       component: ExtendPageList[item].component,
     }))
 ]

@@ -7,7 +7,7 @@
         v-for="item in pageList"
         :key="item.id"
         :text="item.name"
-        :url="`waterfall/${item.id}`"/>
+        :url="`${item.id}`"/>
     </qt-view>
     <qt-view class="quick-ui-content-divider-css"/>
     <qt-view class="quick-ui-content-row-css">
@@ -15,7 +15,7 @@
         v-for="item in itemPageList"
         :key="item.id"
         :text="item.name"
-        :url="`waterfall/${item.id}`"/>
+        :url="`${item.id}`"/>
     </qt-view>
     <qt-view class="quick-ui-content-divider-css"/>
     <qt-view class="quick-ui-content-row-css">
@@ -23,7 +23,7 @@
         v-for="item in sectionPageList"
         :key="item.id"
         :text="item.name"
-        :url="`waterfall/${item.id}`"/>
+        :url="`${item.id}`"/>
     </qt-view>
   </qt-view>
 </template>

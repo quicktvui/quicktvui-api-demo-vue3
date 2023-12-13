@@ -50,9 +50,9 @@ function buildComponentSection(): QTWaterfallSection {
 }
 
 function buildComponentItemList(): Array<QTWaterfallItem> {
-  const itemList = Object.keys(QTComponentNavPageList).map(data => ({
-    id: data,
-    name: QTComponentNavPageList[data].name,
+  const itemList = Object.keys(QTComponentNavPageList).map(key => ({
+    _id: key,
+    name: QTComponentNavPageList[key].name,
     style: {
       width: 250,
       height: 80
@@ -95,9 +95,9 @@ function buildModuleSection(): QTWaterfallSection {
 }
 
 function buildModuleItemList(): Array<QTWaterfallItem> {
-  const itemList = Object.keys(ESModulePageList).map(data => ({
-    id: data,
-    name: ESModulePageList[data].name,
+  const itemList = Object.keys(ESModulePageList).map(key => ({
+    _id: key,
+    name: ESModulePageList[key].name,
     style: {
       width: 250,
       height: 80
@@ -140,9 +140,9 @@ function buildFrameworkSection(): QTWaterfallSection {
 }
 
 function buildFrameworkItemList(): Array<QTWaterfallItem> {
-  const itemList = Object.keys(QTFrameworkNavPageList).map(data => ({
-    id: data,
-    name: QTFrameworkNavPageList[data].name,
+  const itemList = Object.keys(QTFrameworkNavPageList).map(key => ({
+    _id: key,
+    name: QTFrameworkNavPageList[key].name,
     style: {
       width: 250,
       height: 80

@@ -2,7 +2,8 @@
   <qt-view class="es-sdk-root-css">
     <qt-waterfall
       ref="waterfallRef"
-      class="es-sdk-qt-waterfall-css">
+      class="es-sdk-qt-waterfall-css"
+      @onItemClick="onItemClick">
       <template v-slot:item>
         <nav-button-item :type="1"/>
       </template>
@@ -14,11 +15,14 @@
 
 <script lang="ts">
 import {defineComponent} from "@vue/runtime-core";
-import {QTIWaterfall} from "@quicktvui/quicktvui3";
+import {QTIWaterfall, QTWaterfallItem} from "@quicktvui/quicktvui3";
 import {ref} from "vue";
 import {buildNavSectionList, buildNavWaterfall} from "../nav/NavDataAdapter";
 import nav_button_item from './nav-button-item.vue'
+import {useESLog} from "@extscreen/es3-core";
+import {useESRouter} from "@extscreen/es3-router";
 
+const TAG = 'index'
 export default defineComponent({
   name: 'index',
   components: {
@@ -26,15 +30,30 @@ export default defineComponent({
   },
   setup(props, context) {
     const waterfallRef = ref<QTIWaterfall>()
+    const log = useESLog()
+    const router = useESRouter()
 
     function onESCreate() {
       waterfallRef.value?.init(buildNavWaterfall())
       waterfallRef.value?.setSectionList(buildNavSectionList())
     }
 
+    function onItemClick(sectionIndex: number, position: number, item: QTWaterfallItem) {
+      log.d(TAG, '-------onItemClick-------->>>>' +
+        " sectionIndex:" + sectionIndex +
+        " position:" + position +
+        " item:", item
+      )
+      router.push({
+        name: item._id,
+        params: {}
+      })
+    }
+
     return {
       waterfallRef,
-      onESCreate
+      onESCreate,
+      onItemClick
     }
   },
 });

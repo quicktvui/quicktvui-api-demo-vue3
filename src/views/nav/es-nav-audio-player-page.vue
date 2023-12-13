@@ -7,7 +7,7 @@
         <s-nav-button
           v-for="(item, _) in pageList" :key="item.id"
           :text="item.name"
-          :url="`audio/${item.id}`"/>
+          :url="`${item.id}`"/>
       </div>
     </div>
   </div>

@@ -7,7 +7,7 @@
         v-for="item in pageList"
         :key="item.id"
         :text="item.name"
-        :url="`nav-bar/${item.id}`"/>
+        :url="`${item.id}`"/>
     </qt-view>
   </qt-view>
 </template>

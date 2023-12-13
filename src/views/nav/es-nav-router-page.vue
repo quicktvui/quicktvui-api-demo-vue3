@@ -8,7 +8,7 @@
         <s-nav-button
           v-for="(item, _) in routeESPageList" :key="item.id"
           :text="item.name"
-          :url="`router/${item.id}`"/>
+          :url="`${item.id}`"/>
       </div>
     </div>
   </div>
