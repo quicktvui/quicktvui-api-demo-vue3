@@ -34,6 +34,7 @@
     "@extscreen/es3-soundpool-player": "0.0.8",
     "@extscreen/es3-audio-player": "0.0.5",
     "@extscreen/es3-audio-service-player": "0.0.5",
+    "@extscreen/es3-game-center": "0.0.2",
     "@quicktvui/quicktvui3": "0.0.93"
   },
   "devDependencies": {

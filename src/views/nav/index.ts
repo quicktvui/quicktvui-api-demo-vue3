@@ -1,4 +1,20 @@
-import qt_nav_start_page from './qt-nav-start-page.vue';
+import es_nav_start_page from './es-nav-start-page';
+import es_nav_router_page from './es-nav-router-page';
+import es_nav_component_page from './es-nav-component-page';
+import es_nav_base_component_page from './es-nav-base-component-page';
+import es_nav_flex_page from './es-nav-flex-page';
+import es_nav_lifecycle_page from './es-nav-lifecycle-page';
+import es_nav_module_page from './es-nav-module-page';
+import es_nav_log_page from './es-nav-log-page';
+import es_nav_key_page from './es-nav-key-page';
+import es_nav_network_page from './es-nav-network-page';
+import es_nav_animation_page from './es-nav-animation-page';
+import es_nav_video_player_page from './es-nav-video-player-page';
+import es_nav_ad_player_page from './es-nav-ad-player-page';
+import es_nav_player_manager_page from './es-nav-player-manager-page';
+import es_nav_audio_player_page from './es-nav-audio-player-page';
+import es_nav_audio_service_player_page from './es-nav-audio-service-player-page';
+import es_nav_sound_pool_player_page from './es-nav-sound-pool-player-page';
 import qt_nav_view_page from './qt-nav-view-page.vue';
 import qt_nav_text_page from './qt-nav-text-page.vue';
 import qt_nav_image_page from './qt-nav-image-page.vue';
@@ -16,9 +32,73 @@ import text_view_page from './text-view-page.vue';
 import qt_nav_extend_page from './qt-nav-extend-page.vue';
 
 const QTAPINavPageList = {
-  qt_nav_start_page: {
+  es_nav_start_page: {
     name: '起步',
-    component: qt_nav_start_page,
+    component: es_nav_start_page,
+  },
+  es_nav_base_component_page: {
+    name: '基础组件',
+    component: es_nav_base_component_page,
+  },
+  es_nav_component_page: {
+    name: '扩展组件',
+    component: es_nav_component_page,
+  },
+  es_nav_module_page: {
+    name: '扩展模块',
+    component: es_nav_module_page,
+  },
+  es_nav_flex_page: {
+    name: '布局',
+    component: es_nav_flex_page,
+  },
+  es_nav_animation_page: {
+    name: '动画',
+    component: es_nav_animation_page,
+  },
+  es_nav_lifecycle_page: {
+    name: '页面生命周期',
+    component: es_nav_lifecycle_page,
+  },
+  es_nav_router_page: {
+    name: '页面路由',
+    component: es_nav_router_page,
+  },
+  es_nav_log_page: {
+    name: '日志',
+    component: es_nav_log_page,
+  },
+  es_nav_key_page: {
+    name: '按键',
+    component: es_nav_key_page,
+  },
+  es_nav_network_page: {
+    name: '网络',
+    component: es_nav_network_page,
+  },
+  es_nav_sound_pool_player_page: {
+    name: 'SoundPool播放器',
+    component: es_nav_sound_pool_player_page,
+  },
+  es_nav_audio_player_page: {
+    name: '音频播放器',
+    component: es_nav_audio_player_page,
+  },
+  es_nav_audio_service_player_page: {
+    name: '音频播放服务',
+    component: es_nav_audio_service_player_page,
+  },
+  es_nav_video_player_page: {
+    name: '视频播放器',
+    component: es_nav_video_player_page,
+  },
+  es_nav_ad_player_page: {
+    name: '广告播放器',
+    component: es_nav_ad_player_page,
+  },
+  es_nav_player_manager_page: {
+    name: '播放管理器',
+    component: es_nav_player_manager_page,
   },
   qt_nav_view_page: {
     name: 'QTView',
@@ -80,7 +160,6 @@ const QTAPINavPageList = {
     name: 'Extend',
     component: qt_nav_extend_page,
   },
-  
 };
 
 export default QTAPINavPageList;

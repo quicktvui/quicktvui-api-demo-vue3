@@ -1281,6 +1281,11 @@
     ws "^8.8.0"
     yargs "^17.2.1"
 
+"@extscreen/es3-game-center@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.npmmirror.com/@extscreen/es3-game-center/-/es3-game-center-0.0.2.tgz#95d0ce84b4f606a9e6597492d311e9e61eadb2ed"
+  integrity sha512-HZemjp3obCRTUuqBcmApRvrmxnnNaX9J+hXC2AH0vvNfWzjCV2MVENQCjG3WFydg2zijojs9nLKyDCux+bWnCQ==
+
 "@extscreen/es3-m1905-player@0.0.12":
   version "0.0.12"
   resolved "https://registry.yarnpkg.com/@extscreen/es3-m1905-player/-/es3-m1905-player-0.0.12.tgz#b637234dc716da68e960e9a2ab95c87c1946ad48"
