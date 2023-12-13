@@ -1,6 +1,6 @@
-import index from "./views/index.vue";
-import error from "./views/error.vue";
-import splash from "./views/splash/es-splash-page.vue";
+import index from "./views/index/index.vue";
+import error from "./views/error/index.vue";
+import splash from "./views/splash/index.vue";
 //
 import ESAPINavPageList from "./views/nav";
 import ESRouterESList from "./components/es-router/es";
