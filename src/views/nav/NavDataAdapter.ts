@@ -5,7 +5,7 @@ import {
   QTWaterfallSectionType
 } from "@quicktvui/quicktvui3";
 import ESModulePageList from "../../components/es-module";
-import QTAPINavPageList from "./index";
+import {QTComponentNavPageList, QTFrameworkNavPageList} from './index'
 
 export function buildNavWaterfall(): QTWaterfall {
   let waterfall: QTWaterfall = {
@@ -49,10 +49,9 @@ function buildComponentSection(): QTWaterfallSection {
 }
 
 function buildComponentItemList(): Array<QTWaterfallItem> {
-  console.log('------------buildComponentItemList----start--------->>>>', QTAPINavPageList)
-  const itemList = Object.keys(QTAPINavPageList).map(data => ({
+  const itemList = Object.keys(QTComponentNavPageList).map(data => ({
     id: data,
-    name: QTAPINavPageList[data].name,
+    name: QTComponentNavPageList[data].name,
     style: {
       width: 250,
       height: 80
@@ -65,7 +64,6 @@ function buildComponentItemList(): Array<QTWaterfallItem> {
     },
     type: 1
   }))
-  console.log('------------buildComponentItemList-----end-------->>>>', itemList)
   return itemList
 }
 
@@ -140,10 +138,9 @@ function buildFrameworkSection(): QTWaterfallSection {
 }
 
 function buildFrameworkItemList(): Array<QTWaterfallItem> {
-  console.log('------------buildFrameworkItemList-------start------>>>>', QTAPINavPageList)
-  const itemList = Object.keys(QTAPINavPageList).map(data => ({
+  const itemList = Object.keys(QTFrameworkNavPageList).map(data => ({
     id: data,
-    name: QTAPINavPageList[data].name,
+    name: QTFrameworkNavPageList[data].name,
     style: {
       width: 250,
       height: 80
@@ -156,6 +153,5 @@ function buildFrameworkItemList(): Array<QTWaterfallItem> {
     },
     type: 1
   }))
-  console.log('------------buildFrameworkItemList-------end------>>>>', itemList)
   return itemList
 }

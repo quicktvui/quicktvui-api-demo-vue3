@@ -32,10 +32,8 @@ import ESADPlayerPageList from "./components/es-ad-player";
 import ESAudioPlayerPageList from "./components/es-audio-player";
 import ESAudioServicePlayerPageList from "./components/es-audio-service-player";
 import ESSoundPoolPlayerPageList from "./components/es-sound-pool-player"
-import ESM1905PlayerPageList from "./components/es-m1905-player"
 import ESGameCenterPageList from "./components/es-game-center"
 //
-import QTAPINavPageList from "./views/nav"
 import QTButtonPageList from "./components/qt-button"
 import QTGridViewPageList from "./components/qt-grid-view"
 import QTListViewPageList from "./components/qt-list-view"
@@ -48,6 +46,8 @@ import QTTextPageList from "./components/qt-text"
 import QTImagePageList from "./components/qt-image"
 import TextViewPageList from "./components/text-view"
 import ExtendPageList from "./components/extend"
+
+import {QTComponentNavPageList, QTFrameworkNavPageList} from './views/nav/index'
 
 import {
   QTWaterfallPageList,
@@ -80,11 +80,17 @@ const routes = [
     component: error,
     launchMode: 'standard',
   },
-  ...Object.keys(QTAPINavPageList)
+  ...Object.keys(QTComponentNavPageList)
     .map(item => ({
       path: `/nav/${item}`,
       name: `nav/${item}`,
-      component: QTAPINavPageList[item].component,
+      component: QTComponentNavPageList[item].component,
+    })),
+  ...Object.keys(QTFrameworkNavPageList)
+    .map(item => ({
+      path: `/nav/${item}`,
+      name: `nav/${item}`,
+      component: QTFrameworkNavPageList[item].component,
     })),
   ...Object.keys(ESRouterESList)
     .map(item => ({
@@ -235,12 +241,6 @@ const routes = [
       path: `/video/${item}`,
       name: `video/${item}`,
       component: ESVideoPlayerPageList[item].component,
-    })),
-  ...Object.keys(ESM1905PlayerPageList)
-    .map(item => ({
-      path: `/m1905/${item}`,
-      name: `m1905/${item}`,
-      component: ESM1905PlayerPageList[item].component,
     })),
   ...Object.keys(ESAudioPlayerPageList)
     .map(item => ({
