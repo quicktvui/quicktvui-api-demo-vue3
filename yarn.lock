@@ -1527,10 +1527,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@quicktvui/quicktvui3@0.0.93":
-  version "0.0.93"
-  resolved "https://registry.npmmirror.com/@quicktvui/quicktvui3/-/quicktvui3-0.0.93.tgz#ceb42550d2b67ae71313559ec8924e32f3382518"
-  integrity sha512-5Xq/rfxAUgcG9YGVsaMFsqtkasIrdMbf8MkEhPvQuR8Ff19HkupZrkWQJpXwLP7KlCEOYLC1cR073kENJisaGg==
+"@quicktvui/quicktvui3@0.0.95":
+  version "0.0.95"
+  resolved "https://registry.yarnpkg.com/@quicktvui/quicktvui3/-/quicktvui3-0.0.95.tgz#7dd92acc70c60c213d754aed3f972ac05d32a6da"
+  integrity sha512-M3kQ11nZr2l24xrcGVcJOxJOpS2wreRJwE7aZacI0dTPnBDhDYkA2tS7dE7J0+h9G4uqUbyrxlqkViIl6jGT6g==
 
 "@rollup/plugin-commonjs@^25.0.0":
   version "25.0.7"

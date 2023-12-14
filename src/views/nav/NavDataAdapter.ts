@@ -10,7 +10,7 @@ import ESComponentList from "../../components/es-component";
 
 export function buildNavWaterfall(): QTWaterfall {
   let waterfall: QTWaterfall = {
-    width: 1740,//TODO FIXME
+    width: 1920,
     height: 1080
   }
   return waterfall
