@@ -4,10 +4,8 @@ import splash from "./views/splash/index.vue";
 //
 import ESRouterESList from "./components/es-router/es";
 import ESComponentList from "./components/es-component";
-import ESTextViewComponentList from "./components/es-component/text-view";
 import ESLoadingViewComponentList from "./components/es-component/loading-view";
 import ESWebViewComponentList from "./components/es-component/web-view";
-import ESSurfaceViewComponentList from "./components/es-component/surface-view";
 import ESBaseComponentList from "./components/es-base-component";
 import ESComponentImgPageList from "./components/es-base-component/img";
 import ESFlexDirectionPageList from "./components/es-flex/direction";
@@ -24,7 +22,6 @@ import ESRangeSeekbarPageList from "./components/es-component/range-seek-bar";
 import ESProgressBarComponentList from "./components/es-component/progress-bar";
 import ESSeekBarComponentList from "./components/es-component/seek-bar";
 import ESX5WebViewComponentList from "./components/es-component/x5web-view";
-import ESChartComponentList from "./components/es-component/chart";
 import ESAnimationPageList from "./components/es-animation";
 import ESVideoPlayerPageList from "./components/es-video-player";
 import ESPlayerManagerPageList from "./components/es-player-manager";
@@ -45,9 +42,11 @@ import QTViewPageList from "./components/qt-view"
 import QTTextPageList from "./components/qt-text"
 import QTImagePageList from "./components/qt-image"
 import TextViewPageList from "./components/text-view"
-import ExtendPageList from "./components/extend"
 
-import {QTComponentNavPageList, QTFrameworkNavPageList} from './views/nav/index'
+import {
+  QTComponentNavPageList,
+  QTFrameworkNavPageList
+} from './views/nav/index'
 
 import {
   QTWaterfallPageList,
@@ -104,12 +103,6 @@ const routes = [
       name: `${item}`,
       component: ESComponentList[item].component,
     })),
-  ...Object.keys(ESTextViewComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESTextViewComponentList[item].component,
-    })),
   ...Object.keys(ESLoadingViewComponentList)
     .map(item => ({
       path: `/${item}`,
@@ -127,12 +120,6 @@ const routes = [
       path: `/${item}`,
       name: `${item}`,
       component: ESX5WebViewComponentList[item].component,
-    })),
-  ...Object.keys(ESSurfaceViewComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESSurfaceViewComponentList[item].component,
     })),
   ...Object.keys(ESBaseComponentList)
     .map(item => ({
@@ -223,12 +210,6 @@ const routes = [
       path: `/${item}`,
       name: `${item}`,
       component: ESSeekBarComponentList[item].component,
-    })),
-  ...Object.keys(ESChartComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESChartComponentList[item].component,
     })),
   ...Object.keys(ESAnimationPageList)
     .map(item => ({
@@ -387,12 +368,6 @@ const routes = [
       name: `${item}`,
       component: QTClassifiedListViewPageList[item].component,
     })),
-  ...Object.keys(ExtendPageList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ExtendPageList[item].component,
-    }))
 ]
 
 export default routes

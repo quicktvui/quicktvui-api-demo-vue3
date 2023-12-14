@@ -6,7 +6,7 @@
       <s-nav-button
         v-for="(item, _) in pageList" :key="item.id"
         :text="item.name"
-        :url="`component/rangeseekbar/${item.id}`"/>
+        :url="`${item.id}`"/>
     </div>
   </div>
 </template>

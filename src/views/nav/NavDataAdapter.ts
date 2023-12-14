@@ -6,6 +6,7 @@ import {
 } from "@quicktvui/quicktvui3";
 import ESModulePageList from "../../components/es-module";
 import {QTComponentNavPageList, QTFrameworkNavPageList} from './index'
+import ESComponentList from "../../components/es-component";
 
 export function buildNavWaterfall(): QTWaterfall {
   let waterfall: QTWaterfall = {
@@ -50,7 +51,8 @@ function buildComponentSection(): QTWaterfallSection {
 }
 
 function buildComponentItemList(): Array<QTWaterfallItem> {
-  const itemList = Object.keys(QTComponentNavPageList).map(key => ({
+  const itemList: Array<QTWaterfallItem> = []
+  const qtComponentItemList = Object.keys(QTComponentNavPageList).map(key => ({
     _id: key,
     name: QTComponentNavPageList[key].name,
     style: {
@@ -65,6 +67,23 @@ function buildComponentItemList(): Array<QTWaterfallItem> {
     },
     type: 1
   }))
+  itemList.push(...qtComponentItemList)
+  const esComponentItemList = Object.keys(ESComponentList).map(key => ({
+    _id: key,
+    name: ESComponentList[key].name,
+    style: {
+      width: 250,
+      height: 80
+    },
+    decoration: {
+      left: 10,
+      right: 10,
+      top: 10,
+      bottom: 10,
+    },
+    type: 1
+  }))
+  itemList.push(...esComponentItemList)
   return itemList
 }
 

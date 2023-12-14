@@ -29,7 +29,6 @@ import qt_nav_waterfall_page from './qt-nav-waterfall-page.vue';
 import qt_nav_tabs_waterfall_page from './qt-nav-tabs-waterfall-page.vue';
 import qt_classified_list_view_page from './qt-classified-list-view-page.vue';
 import text_view_page from './text-view-page.vue';
-import qt_nav_extend_page from './qt-nav-extend-page.vue';
 
 export const QTComponentNavPageList = {
   qt_nav_view_page: {
@@ -87,10 +86,6 @@ export const QTComponentNavPageList = {
   qt_classified_list_view_page: {
     name: 'QTClassifiedListView',
     component: qt_classified_list_view_page,
-  },
-  qt_nav_extend_page: {
-    name: 'Extend',
-    component: qt_nav_extend_page,
   },
   es_nav_animation_page: {
     name: '动画',

@@ -7,7 +7,7 @@
         <s-nav-button
           v-for="(item, _) in pageList" :key="item.id"
           :text="item.name"
-          :url="`component/progressbar/${item.id}`"/>
+          :url="`${item.id}`"/>
       </div>
     </div>
   </div>
