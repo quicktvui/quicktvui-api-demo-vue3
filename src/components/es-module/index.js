@@ -16,9 +16,6 @@ import es_file_module_page from './es-file-module-page';
 import es_usb_module_page from './es-usb-module-page';
 import es_shared_data_module_page from './es-shared-data-module-page';
 import es_runtime_module_page from './es-runtime-module-page';
-import es_plugin_module_page from './es-plugin-module-page';
-import es_actionbar_module_page from './es-actionbar-module-page';
-import es_location_module_page from './es-location-module-page';
 
 const ESModulePageList = {
   es_module_page: {
@@ -110,21 +107,6 @@ const ESModulePageList = {
     name: '运行容器信息',
     component: es_runtime_module_page,
   },
-
-  es_plugin_module_page: {
-    name: '插件',
-    component: es_plugin_module_page,
-  },
-
-  es_actionbar_module_page: {
-    name: '顶部菜单条',
-    component: es_actionbar_module_page,
-  },
-
-  es_location_module_page: {
-    name: '定位模块',
-    component: es_location_module_page,
-  }
 };
 
 export default ESModulePageList;
