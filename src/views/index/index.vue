@@ -8,7 +8,7 @@
         <nav-button-item :type="1"/>
       </template>
     </qt-waterfall>
-    <qt-text class="es-sdk-index-content-title-css">QuickTVUI 3.x API演示项目</qt-text>
+    <qt-text class="es-sdk-index-content-title-css">QuickTVUI API演示项目</qt-text>
     <qt-view class="es-sdk-index-content-divider-css"/>
   </qt-view>
 </template>
