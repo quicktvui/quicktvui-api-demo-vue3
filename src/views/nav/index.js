@@ -109,7 +109,7 @@ export const QTComponentNavPageList = {
     component: qt_nav_waterfall_page,
   },
   qt_nav_tabs_waterfall_page: {
-    name: 'QTTabsWaterfall',
+    name: 'QTTabs',
     component: qt_nav_tabs_waterfall_page,
   },
   qt_classified_list_view_page: {

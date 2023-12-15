@@ -3,7 +3,6 @@
     <qt-view class="es-sdk-splash-logo-css">
       <qt-image class="es-sdk-splash-css" :src="logo"/>
       <qt-view class="es-sdk-content-column-css">
-        <s-text-view text="快应用 3.X"/>
         <span class="es-sdk-splash-title-css">QuickTVUI</span>
       </qt-view>
     </qt-view>
