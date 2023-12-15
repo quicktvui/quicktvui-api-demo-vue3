@@ -2,14 +2,14 @@
   <div class="es-sdk-root-css">
     <s-title-view class="es-sdk-content-title-css" :text="this.$options.name"/>
     <div class="es-sdk-content-divider-css"/>
-    <qt-tab
+    <qt-tabs
       ref="tabRef"
       @onTabPageLoadData="onTabPageLoadData"
       class="qt-tabs-css">
       <template v-slot:waterfall-vue-section>
         <vue-one-section/>
       </template>
-    </qt-tab>
+    </qt-tabs>
   </div>
 </template>
 

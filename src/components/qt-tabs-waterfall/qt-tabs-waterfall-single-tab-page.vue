@@ -2,7 +2,7 @@
   <div class="es-sdk-root-css">
     <s-title-view class="es-sdk-content-title-css" :text="this.$options.name"/>
     <div class="es-sdk-content-divider-css"/>
-    <qt-tab
+    <qt-tabs
       ref="tabRef"
       tabNavBarClass="qt-tabs-nav-bar-css"
       tabContentClass="qt-tabs-content-css"
@@ -11,7 +11,7 @@
       <template v-slot:waterfall-item>
         <app-list-item :type="1"/>
       </template>
-    </qt-tab>
+    </qt-tabs>
   </div>
 </template>
 

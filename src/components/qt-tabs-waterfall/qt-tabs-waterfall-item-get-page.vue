@@ -5,14 +5,14 @@
     <div class="es-sdk-content-row-css">
       <s-text-button text="查询Item" @onButtonClicked="onButtonClicked"/>
     </div>
-    <qt-tab
+    <qt-tabs
       ref="tabRef"
       @onTabPageLoadData="onTabPageLoadData"
       class="qt-tabs-css">
       <template v-slot:waterfall-item>
         <app-list-item :type="1"/>
       </template>
-    </qt-tab>
+    </qt-tabs>
   </div>
 </template>
 
