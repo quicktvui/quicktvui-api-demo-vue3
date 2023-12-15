@@ -68,22 +68,6 @@ function buildComponentItemList(): Array<QTWaterfallItem> {
     type: 1
   }))
   itemList.push(...qtComponentItemList)
-  const esComponentItemList = Object.keys(ESComponentList).map(key => ({
-    _id: key,
-    name: ESComponentList[key].name,
-    style: {
-      width: 250,
-      height: 80
-    },
-    decoration: {
-      left: 10,
-      right: 10,
-      top: 10,
-      bottom: 10,
-    },
-    type: 1
-  }))
-  itemList.push(...esComponentItemList)
   return itemList
 }
 
