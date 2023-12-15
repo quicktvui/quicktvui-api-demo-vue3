@@ -42,7 +42,7 @@ import {ESLogLevel, useESLog} from "@extscreen/es3-core";
 const TAG = 'ESIACPage'
 
 export default defineComponent({
-  name: "应用间通信模块",
+  name: "快应用间通信模块",
   setup() {
 
     const intentText = ref('')

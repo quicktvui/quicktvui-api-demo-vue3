@@ -69,7 +69,7 @@ const ESModulePageList = {
   },
 
   es_iac_module_page: {
-    name: '应用间通信模块',
+    name: '快应用间通信模块',
     component: es_iac_module_page,
   },
 
