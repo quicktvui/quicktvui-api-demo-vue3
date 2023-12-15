@@ -121,6 +121,9 @@ export const QTComponentNavPageList = {
     name: 'QTClassifiedListView',
     component: qt_classified_list_view_page,
   },
+}
+
+export const QTPlayerNavPageList = {
   es_nav_sound_pool_player_page: {
     name: 'SoundPool播放器',
     component: es_nav_sound_pool_player_page,
@@ -145,7 +148,7 @@ export const QTComponentNavPageList = {
     name: '播放管理器',
     component: es_nav_player_manager_page,
   },
-}
+};
 
 export const QTFrameworkNavPageList = {
   es_nav_lifecycle_page: {

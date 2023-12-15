@@ -48,7 +48,8 @@ import QTSeekBarPageList from "./components/qt-seek-bar"
 
 import {
   QTComponentNavPageList,
-  QTFrameworkNavPageList
+  QTFrameworkNavPageList,
+  QTPlayerNavPageList
 } from './views/nav/index'
 
 import {
@@ -93,6 +94,12 @@ const routes = [
       path: `/${item}`,
       name: `${item}`,
       component: QTFrameworkNavPageList[item].component,
+    })),
+  ...Object.keys(QTPlayerNavPageList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: QTPlayerNavPageList[item].component,
     })),
   ...Object.keys(ESRouterESList)
     .map(item => ({
