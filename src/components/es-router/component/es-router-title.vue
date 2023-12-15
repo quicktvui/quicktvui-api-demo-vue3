@@ -2,7 +2,7 @@
   <div class="es-sdk-content-column-css">
     <div class="es-sdk-content-row-css">
       <s-text-button text="back" :requestFocus="true" @onButtonClicked="finishESPage()"/>
-      <s-nav-button text="第六个页面Activity" :url="'router/router_six_page'"/>
+      <s-nav-button text="第六个页面Activity" :url="'router_six_page'"/>
       <s-text-button text="第七个页面异步组件" @onButtonClicked="launchESPageSix"/>
       <s-text-button text="第五个页面并关闭当前页面" @onButtonClicked="launchAfterFinishESPage"/>
       <s-text-button text="Native方式页面" @onButtonClicked="launchNativePage"/>
@@ -35,7 +35,7 @@ export default defineComponent({
 
     const launchAfterFinishESPage = () => {
       // router.launchAfterFinishESPage({
-      //   url: 'router/router_five_page',
+      //   url: 'router_five_page',
       //   params: {
       //     from: 'router_first'
       //   },
@@ -44,7 +44,7 @@ export default defineComponent({
     //
     const launchESPageZero = () => {
       router.push({
-        name: 'router/router_zero_page',
+        name: 'router_zero_page',
         params: {
           from: 'router_first'
         },
@@ -52,13 +52,13 @@ export default defineComponent({
     }
     const launchESPageFirst = () => {
       router.push({
-        name: 'router/router_first_page',
+        name: 'router_first_page',
         params: '1111111111111111',
       });
     }
     const launchESPageSecond = () => {
       router.push({
-        name: 'router/router_second_page',
+        name: 'router_second_page',
         params: {
           from: 'router_first'
         }
@@ -66,7 +66,7 @@ export default defineComponent({
     }
     const launchESPageThird = () => {
       router.push({
-        name: 'router/router_third_page',
+        name: 'router_third_page',
         params: {
           from: 'router_first'
         },
@@ -74,7 +74,7 @@ export default defineComponent({
     }
     const launchESPageFour = () => {
       router.push({
-        name: 'router/router_four_page',
+        name: 'router_four_page',
         params: {
           from: 'router_first'
         },
@@ -82,7 +82,7 @@ export default defineComponent({
     }
     const launchESPageFive = () => {
       router.push({
-        name: 'router/router_five_page',
+        name: 'router_five_page',
         params: {
           from: 'router_first'
         },
@@ -90,7 +90,7 @@ export default defineComponent({
     }
     const launchESPageSix = () => {
       router.push({
-        name: 'router/router_seven_page',
+        name: 'router_seven_page',
         params: {
           from: 'router_first'
         },
@@ -99,7 +99,7 @@ export default defineComponent({
     const launchNativePage = () => {
       nativeRouter.push({
         args: {
-          name: 'router/router_native_page',
+          name: 'router_native_page',
         },
       });
     }
