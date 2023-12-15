@@ -1,5 +1,9 @@
 # QuickTVUI
 
+## 安装运行环境
+
+### [安装运行环境](http://developer.extscreen.com/guide/ "")
+
 ## 运行
 
 ### 安装依赖
