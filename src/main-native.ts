@@ -53,3 +53,9 @@ import {createESADPlayer} from "@extscreen/es3-ad-player";
 const ADPlayer = createESADPlayer();
 app.use(ADPlayer);
 //----------------------------------------------------------
+
+//---------------------------网络请求----------------------------------
+import {createRequestManager, RequestManager} from "./request/RequestManager";
+
+const requestManger: RequestManager = createRequestManager()
+app.use(requestManger);

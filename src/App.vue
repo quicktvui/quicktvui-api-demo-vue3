@@ -8,6 +8,7 @@
 import {defineComponent} from '@vue/runtime-core';
 import {ESLogLevel, useESDevice, useESLog, useESRuntime} from "@extscreen/es3-core";
 import {useESPlayer} from "@extscreen/es3-player";
+import {useRequestManager} from "./request/useApi";
 
 export default defineComponent({
   name: 'App',
@@ -18,9 +19,11 @@ export default defineComponent({
     const runtime = useESRuntime()
     const device = useESDevice()
 
+    const request = useRequestManager()
+
     function onESCreate(app, params) {
-      console.log("--1-应用----app-------onESCreate---->>>>>", params)
       return Promise.resolve()
+        .then(() => request.init(log))
         .then(() => {
           return playerManager.init({
             debug: true,
