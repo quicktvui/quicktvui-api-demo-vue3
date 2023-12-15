@@ -3,9 +3,6 @@ import error from "./views/error/index.vue";
 import splash from "./views/splash/index.vue";
 //
 import ESRouterESList from "./components/es-router/es";
-import ESComponentList from "./components/es-component";
-import ESLoadingViewComponentList from "./components/es-component/loading-view";
-import ESWebViewComponentList from "./components/es-component/web-view";
 import ESFlexDirectionPageList from "./components/es-flex/direction";
 import ESFlexWrapPageList from "./components/es-flex/wrap";
 import ESFlexJustifyContentPageList from "./components/es-flex/justify-content";
@@ -16,10 +13,6 @@ import ESModulePageList from "./components/es-module";
 import ESLogPageList from "./components/es-log";
 import ESKeyPageList from "./components/es-key";
 import ESNetworkPageList from "./components/es-network";
-import ESRangeSeekbarPageList from "./components/es-component/range-seek-bar";
-import ESProgressBarComponentList from "./components/es-component/progress-bar";
-import ESSeekBarComponentList from "./components/es-component/seek-bar";
-import ESX5WebViewComponentList from "./components/es-component/x5web-view";
 import ESVideoPlayerPageList from "./components/es-video-player";
 import ESPlayerManagerPageList from "./components/es-player-manager";
 import ESADPlayerPageList from "./components/es-ad-player";
@@ -107,30 +100,6 @@ const routes = [
       name: `${item}`,
       component: ESRouterESList[item].component,
     })),
-  ...Object.keys(ESComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESComponentList[item].component,
-    })),
-  ...Object.keys(ESLoadingViewComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESLoadingViewComponentList[item].component,
-    })),
-  ...Object.keys(ESWebViewComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESWebViewComponentList[item].component,
-    })),
-  ...Object.keys(ESX5WebViewComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESX5WebViewComponentList[item].component,
-    })),
   ...Object.keys(ESFlexDirectionPageList)
     .map(item => ({
       path: `/${item}`,
@@ -191,25 +160,6 @@ const routes = [
       name: `${item}`,
       component: ESNetworkPageList[item].component,
     })),
-  ...Object.keys(ESRangeSeekbarPageList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESRangeSeekbarPageList[item].component,
-    })),
-  ...Object.keys(ESProgressBarComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESProgressBarComponentList[item].component,
-    })),
-  ...Object.keys(ESSeekBarComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESSeekBarComponentList[item].component,
-    })),
-
   ...Object.keys(ESVideoPlayerPageList)
     .map(item => ({
       path: `/${item}`,
