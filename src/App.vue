@@ -9,6 +9,7 @@ import {defineComponent} from '@vue/runtime-core';
 import {ESLogLevel, useESDevice, useESLog, useESRuntime} from "@extscreen/es3-core";
 import {useESPlayer} from "@extscreen/es3-player";
 import {useRequestManager} from "./request/useApi";
+import {useQTDataSource} from "./datasource/useApi";
 
 export default defineComponent({
   name: 'App',
@@ -19,11 +20,14 @@ export default defineComponent({
     const runtime = useESRuntime()
     const device = useESDevice()
 
+    //
     const request = useRequestManager()
+    const dataSource = useQTDataSource()
 
     function onESCreate(app, params) {
       return Promise.resolve()
         .then(() => request.init(log))
+        .then(() => dataSource.init(request))
         .then(() => {
           return playerManager.init({
             debug: true,

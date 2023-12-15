@@ -59,3 +59,10 @@ import {createRequestManager, RequestManager} from "./request/RequestManager";
 
 const requestManger: RequestManager = createRequestManager()
 app.use(requestManger);
+
+//---------------------------网络接口----------------------------------
+import {createQTDataSource} from "./datasource/impl/QTDataSourceImpl";
+import {IQTDataSource} from "./datasource/IQTDataSource";
+
+const dataSource: IQTDataSource = createQTDataSource()
+app.use(dataSource);
