@@ -29,7 +29,6 @@
     "@extscreen/es3-player": "0.0.50",
     "@extscreen/es3-ad-player": "0.0.10",
     "@extscreen/es3-video-player": "0.0.32",
-    "@extscreen/es3-m1905-player": "0.0.12",
     "@extscreen/es3-player-manager": "0.0.10",
     "@extscreen/es3-soundpool-player": "0.0.8",
     "@extscreen/es3-audio-player": "0.0.5",
