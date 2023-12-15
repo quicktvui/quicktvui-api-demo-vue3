@@ -14,7 +14,7 @@
         <s-text-button text="取消动画" @onButtonClicked="cancelAnimator"/>
         <s-text-button text="重置所有动画" @onButtonClicked="resetAnimators"/>
       </div>
-      <es-animation
+      <qt-animation
         ref="animation_view"
         class="animation-view-css"
         @onAnimationCancel="onAnimationCancel"
@@ -25,7 +25,7 @@
         @onAnimationResume="onAnimationResume"
         @onAnimationUpdate="onAnimationUpdate">
         <div class="animation-inner-view-css"/>
-      </es-animation>
+      </qt-animation>
     </div>
   </div>
 </template>
@@ -33,8 +33,8 @@
 <script lang="ts">
 import {defineComponent} from "@vue/runtime-core";
 import {ref} from "vue";
-import {ESAnimationPropertyName, ESAnimationValueType, ESIAnimation} from "@extscreen/es3-component";
 import {useESRouter} from "@extscreen/es3-router";
+import {QTAnimationPropertyName, QTAnimationValueType, QTIAnimation} from "@quicktvui/quicktvui3";
 
 export default defineComponent({
   name: 'AnimationListener',
@@ -43,13 +43,13 @@ export default defineComponent({
     const animationStatus = ref('重置')
     const animationValue = ref('-1')
     const router = useESRouter()
-    const animation_view = ref<ESIAnimation>()
+    const animation_view = ref<QTIAnimation>()
 
     function init() {
       animation_view.value?.objectAnimator5(
         "AnimationListener",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
         0,
         500,
         0,
@@ -142,5 +142,5 @@ export default defineComponent({
 
 </script>
 
-<style src="./css/es-animation-css.css">
+<style src="./css/qt-animation-css.css">
 </style>

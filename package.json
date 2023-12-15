@@ -25,7 +25,7 @@
     "@extscreen/es3-vue": "0.0.13",
     "@extscreen/es3-router": "0.0.22",
     "@extscreen/es3-core": "0.0.43",
-    "@extscreen/es3-component": "0.0.51",
+    "@extscreen/es3-component": "1.0.0",
     "@extscreen/es3-player": "0.0.50",
     "@extscreen/es3-ad-player": "0.0.10",
     "@extscreen/es3-video-player": "0.0.32",
@@ -35,7 +35,7 @@
     "@extscreen/es3-audio-player": "0.0.5",
     "@extscreen/es3-audio-service-player": "0.0.5",
     "@extscreen/es3-game-center": "0.0.2",
-    "@quicktvui/quicktvui3": "0.0.95"
+    "@quicktvui/quicktvui3": "1.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",

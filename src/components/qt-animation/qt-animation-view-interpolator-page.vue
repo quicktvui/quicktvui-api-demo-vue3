@@ -17,11 +17,11 @@
         <s-text-button text="FastOutLinearInInterpolator" @onButtonClicked="fastOutLinearInInterpolator"/>
         <s-text-button text="FastOutSlowInInterpolator" @onButtonClicked="fastOutSlowInInterpolator"/>
       </div>
-      <es-animation
+      <qt-animation
         ref="animation_view"
         class="animation-view-css">
         <div class="animation-inner-view-css"/>
-      </es-animation>
+      </qt-animation>
     </div>
   </div>
 </template>
@@ -29,27 +29,28 @@
 <script lang="ts">
 import {defineComponent} from "@vue/runtime-core";
 import {ref} from "vue";
-import {
-  ESAnimationInterpolatorType,
-  ESAnimationPropertyName,
-  ESAnimationValueType,
-  ESIAnimation
-} from "@extscreen/es3-component";
+
 import {useESRouter} from "@extscreen/es3-router";
+import {
+  QTAnimationInterpolatorType,
+  QTAnimationPropertyName,
+  QTAnimationValueType,
+  QTIAnimation
+} from "@quicktvui/quicktvui3";
 
 
 export default defineComponent({
   name: 'AnimationInterpolator',
   setup() {
 
-    const animation_view = ref<ESIAnimation>()
+    const animation_view = ref<QTIAnimation>()
     const router = useESRouter()
 
     function nullInterpolator() {
       animation_view.value?.objectAnimator3(
         "NullInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -65,8 +66,8 @@ export default defineComponent({
     function accelerateDecelerateInterpolator() {
       animation_view.value?.objectAnimator3(
         "AccelerateDecelerateInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -76,7 +77,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_ACCELERATE_DECELERATE_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_ACCELERATE_DECELERATE_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("AccelerateDecelerateInterpolator");
@@ -85,8 +86,8 @@ export default defineComponent({
     function accelerateInterpolator() {
       animation_view.value?.objectAnimator3(
         "AccelerateInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -96,7 +97,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_ACCELERATE_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_ACCELERATE_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("AccelerateInterpolator");
@@ -105,8 +106,8 @@ export default defineComponent({
     function anticipateInterpolator() {
       animation_view.value?.objectAnimator3(
         "AnticipateInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -116,7 +117,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_ANTICIPATE_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_ANTICIPATE_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("AnticipateInterpolator");
@@ -125,8 +126,8 @@ export default defineComponent({
     function anticipateOvershootInterpolator() {
       animation_view.value?.objectAnimator3(
         "AnticipateOvershootInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -136,7 +137,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_ANTICIPATE_OVERSHOOT_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_ANTICIPATE_OVERSHOOT_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("AnticipateOvershootInterpolator");
@@ -145,8 +146,8 @@ export default defineComponent({
     function bounceInterpolator() {
       animation_view.value?.objectAnimator3(
         "BounceInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -156,7 +157,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_BOUNCE_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_BOUNCE_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("BounceInterpolator");
@@ -165,8 +166,8 @@ export default defineComponent({
     function cycleInterpolator() {
       animation_view.value?.objectAnimator3(
         "CycleInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -176,7 +177,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_CYCLE_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_CYCLE_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("CycleInterpolator");
@@ -185,8 +186,8 @@ export default defineComponent({
     function decelerateInterpolator() {
       animation_view.value?.objectAnimator3(
         "DecelerateInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -196,7 +197,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_DECELERATE_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_DECELERATE_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("DecelerateInterpolator");
@@ -205,8 +206,8 @@ export default defineComponent({
     function linearInterpolator() {
       animation_view.value?.objectAnimator3(
         "LinearInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -216,7 +217,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_LINEAR_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_LINEAR_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("LinearInterpolator");
@@ -225,8 +226,8 @@ export default defineComponent({
     function overshootInterpolator() {
       animation_view.value?.objectAnimator3(
         "OvershootInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -236,7 +237,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_OVERSHOOT_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_OVERSHOOT_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("OvershootInterpolator");
@@ -245,8 +246,8 @@ export default defineComponent({
     function fastOutLinearInInterpolator() {
       animation_view.value?.objectAnimator3(
         "FastOutLinearInInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -256,7 +257,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_FAST_OUT_LINEAR_IN_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_FAST_OUT_LINEAR_IN_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("FastOutLinearInInterpolator");
@@ -265,8 +266,8 @@ export default defineComponent({
     function fastOutSlowInInterpolator() {
       animation_view.value?.objectAnimator3(
         "FastOutSlowInInterpolator",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         500,
         0,
@@ -276,7 +277,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_FAST_OUT_SLOW_IN_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_FAST_OUT_SLOW_IN_INTERPOLATOR,
         },
       );
       animation_view.value?.startAnimator("FastOutSlowInInterpolator");
@@ -314,5 +315,5 @@ export default defineComponent({
 
 </script>
 
-<style src="./css/es-animation-css.css">
+<style src="./css/qt-animation-css.css">
 </style>

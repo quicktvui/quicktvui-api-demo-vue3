@@ -21,11 +21,11 @@
         <s-text-button text="RotationY+" @onButtonClicked="startRotationYA"/>
         <s-text-button text="RotationY-" @onButtonClicked="startRotationYD"/>
       </div>
-      <es-animation
+      <qt-animation
         ref="animation_view"
         class="animation-inner-img-view-css">
         <img class="animation-inner-img-view-css" :src="imgSrc"/>
-      </es-animation>
+      </qt-animation>
     </div>
   </div>
 </template>
@@ -33,15 +33,15 @@
 <script lang="ts">
 
 import {defineComponent, ref} from "@vue/runtime-core";
-import {ESAnimationPropertyName, ESAnimationValueType, ESIAnimation} from "@extscreen/es3-component";
 import {useESRouter} from "@extscreen/es3-router";
+import {QTAnimationPropertyName, QTAnimationValueType, QTIAnimation} from "@quicktvui/quicktvui3";
 
 export default defineComponent({
   name: 'RotationXYAnimation',
   setup() {
     let imgSrc = require('../../../src/assets/ic_car.jpg').default
 
-    const animation_view = ref<ESIAnimation>()
+    const animation_view = ref<QTIAnimation>()
     const router = useESRouter()
 
     let rotation = 0
@@ -62,8 +62,8 @@ export default defineComponent({
       }
       animation_view.value?.objectAnimator2(
         "4",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
         rotation,
         value,
         100,
@@ -100,8 +100,8 @@ export default defineComponent({
     function startRotationX(value: number) {
       animation_view.value?.objectAnimator2(
         "2",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION_X,
         rotationX,
         value,
         100,
@@ -125,8 +125,8 @@ export default defineComponent({
     function startRotationY(value: number) {
       animation_view.value?.objectAnimator2(
         "3",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION_Y,
         rotationY,
         value,
         100,
@@ -143,8 +143,8 @@ export default defineComponent({
     function reset() {
       animation_view.value?.objectAnimator2(
         "5",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
         0,
         0,
         100,
@@ -158,8 +158,8 @@ export default defineComponent({
 
       animation_view.value?.objectAnimator2(
         "6",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION_X,
         0,
         0,
         100,
@@ -173,8 +173,8 @@ export default defineComponent({
 
       animation_view.value?.objectAnimator2(
         "7",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION_Y,
         0,
         0,
         100,

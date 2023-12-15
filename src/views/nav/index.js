@@ -8,7 +8,7 @@ import es_nav_module_page from './es-nav-module-page';
 import es_nav_log_page from './es-nav-log-page';
 import es_nav_key_page from './es-nav-key-page';
 import es_nav_network_page from './es-nav-network-page';
-import es_nav_animation_page from './es-nav-animation-page';
+import es_nav_animation_page from './qt-nav-animation-page';
 import es_nav_video_player_page from './es-nav-video-player-page';
 import es_nav_ad_player_page from './es-nav-ad-player-page';
 import es_nav_player_manager_page from './es-nav-player-manager-page';
@@ -88,7 +88,7 @@ export const QTComponentNavPageList = {
     component: qt_classified_list_view_page,
   },
   es_nav_animation_page: {
-    name: '动画',
+    name: 'QTAnimation',
     component: es_nav_animation_page,
   },
   es_nav_sound_pool_player_page: {

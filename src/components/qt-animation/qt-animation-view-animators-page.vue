@@ -21,11 +21,11 @@
         <s-text-button text="取消Sequentially动画" @onButtonClicked="cancelAnimator"/>
       </div>
       <div class="es-sdk-content-divider-css"/>
-      <es-animation
+      <qt-animation
         ref="animationRef"
         class="animation-view-css">
         <div class="animation-inner-view-css"/>
-      </es-animation>
+      </qt-animation>
     </div>
   </div>
 </template>
@@ -34,13 +34,13 @@
 
 import {defineComponent} from "@vue/runtime-core";
 import {ref} from "vue";
-import {ESAnimationPropertyName, ESAnimationValueType, ESIAnimation} from "@extscreen/es3-component";
 import {useESRouter} from "@extscreen/es3-router";
+import {QTAnimationPropertyName, QTAnimationValueType, QTIAnimation} from "@quicktvui/quicktvui3";
 
 export default defineComponent({
   name: 'Animators',
   setup() {
-    const animationRef = ref<ESIAnimation>()
+    const animationRef = ref<QTIAnimation>()
     const router = useESRouter()
 
     function playSequentially() {
@@ -48,8 +48,8 @@ export default defineComponent({
       animationRef.value?.animatorSet('SequentiallyAnimatorsId', -1, false);
       animationRef.value?.objectAnimator2(
         "AlphaAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ALPHA,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
         1,
         2000,
@@ -60,8 +60,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "ScaleAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         2.5,
         2000,
@@ -72,8 +72,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "RotationAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
         0,
         300,
         2000,
@@ -84,8 +84,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "TranslationAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
         0,
         300,
         2000,
@@ -109,8 +109,8 @@ export default defineComponent({
       animationRef.value?.animatorSet('TogetherAnimatorsId', -1, false);
       animationRef.value?.objectAnimator2(
         "AlphaAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ALPHA,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
         1,
         1000,
@@ -121,8 +121,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "ScaleAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         1000,
@@ -133,8 +133,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "RotationAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
         0,
         30,
         1000,
@@ -145,8 +145,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "TranslationAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
         0,
         300,
         1000,
@@ -170,8 +170,8 @@ export default defineComponent({
       animationRef.value?.animatorSet('WithAnimatorsId', -1, false);
       animationRef.value?.objectAnimator2(
         "AlphaAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ALPHA,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
         1,
         1000,
@@ -182,8 +182,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "ScaleAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         1000,
@@ -208,8 +208,8 @@ export default defineComponent({
       animationRef.value?.animatorSet('BeforeAnimatorsId', -1, false);
       animationRef.value?.objectAnimator2(
         "TranslationAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
         0,
         300,
         1000,
@@ -220,8 +220,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "ScaleAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         1000,
@@ -246,8 +246,8 @@ export default defineComponent({
       animationRef.value?.animatorSet('WidthAnimatorsId', -1, false);
       animationRef.value?.objectAnimator2(
         "TranslationAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
         0,
         300,
         1000,
@@ -258,8 +258,8 @@ export default defineComponent({
       );
       animationRef.value?.objectAnimator2(
         "ScaleAnimationId",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         1000,
@@ -327,5 +327,5 @@ export default defineComponent({
 });
 </script>
 
-<style src="./css/es-animation-css.css">
+<style src="./css/qt-animation-css.css">
 </style>

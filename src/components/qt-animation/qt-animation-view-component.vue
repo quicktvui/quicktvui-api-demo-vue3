@@ -1,17 +1,17 @@
 <template>
   <div class="es-sdk-root-css">
-    <es-animation
+    <qt-animation
       ref="animation_view_rotation"
       class="animation_view_rotation">
       <div class="animation_inner_view_class"/>
-    </es-animation>
+    </qt-animation>
 
-    <es-animation
+    <qt-animation
       ref="star_view_animation"
       class="animation_view_star_css">
       <img class="animation_inner_view_class"
            :src="require('../../assets/star.png')"/>
-    </es-animation>
+    </qt-animation>
     <s-title-view class="es-sdk-content-title-css" :text="this.$options.name"/>
     <div class="es-sdk-content-divider-css"/>
     <div class="es-sdk-content-row-css">
@@ -29,24 +29,25 @@
 import {defineComponent} from "@vue/runtime-core";
 import {ref} from "vue";
 import {
-  ESAnimationInterpolatorType,
-  ESAnimationPropertyName,
-  ESAnimationValueType,
-  ESIAnimation
-} from "@extscreen/es3-component";
+  QTAnimationInterpolatorType,
+  QTAnimationPropertyName,
+  QTAnimationValueType,
+  QTIAnimation
+} from "@quicktvui/quicktvui3";
+
 
 export default defineComponent({
   name: '动画组件',
   setup() {
 
-    const animation_view_rotation = ref<ESIAnimation>()
-    const star_view_animation = ref<ESIAnimation>()
+    const animation_view_rotation = ref<QTIAnimation>()
+    const star_view_animation = ref<QTIAnimation>()
 
     function playRotationAnim() {
       star_view_animation.value?.objectAnimator3(
         "0",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
         0,
         360,
         0,
@@ -66,8 +67,8 @@ export default defineComponent({
       //SCALE_X
       star_view_animation.value?.objectAnimator2(
         "0",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1,
         1000,
@@ -80,8 +81,8 @@ export default defineComponent({
       //SCALE_Y
       star_view_animation.value?.objectAnimator2(
         "1",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_Y,
         0,
         1,
         1000,
@@ -94,8 +95,8 @@ export default defineComponent({
       //alpha
       star_view_animation.value?.objectAnimator2(
         "2",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ALPHA,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
         1,
         1000,
@@ -108,8 +109,8 @@ export default defineComponent({
       //旋转
       star_view_animation.value?.objectAnimator2(
         "3",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
         0,
         -50,
         1000,
@@ -121,8 +122,8 @@ export default defineComponent({
 
       star_view_animation.value?.objectAnimator2(
         "4",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
         0,
         500,
         1000,
@@ -134,8 +135,8 @@ export default defineComponent({
 
       star_view_animation.value?.objectAnimator2(
         "5",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         -200,
         1000,
@@ -150,8 +151,8 @@ export default defineComponent({
       //旋转
       star_view_animation.value?.objectAnimator2(
         "6",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
         0,
         360,
         1000,
@@ -186,8 +187,8 @@ export default defineComponent({
     function playTranslationStarAnim() {
       star_view_animation.value?.objectAnimator2(
         "4",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
         0,
         500,
         1000,
@@ -199,8 +200,8 @@ export default defineComponent({
 
       star_view_animation.value?.objectAnimator2(
         "5",
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         -200,
         1000,
@@ -217,8 +218,8 @@ export default defineComponent({
     function playTranslationYAnim() {
       animation_view_rotation.value?.objectAnimator3(
         "23",//id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         360,
         0,
@@ -228,7 +229,7 @@ export default defineComponent({
         false,
         false,
         {
-          type: ESAnimationInterpolatorType.ES_CYCLE_INTERPOLATOR,
+          type: QTAnimationInterpolatorType.QT_CYCLE_INTERPOLATOR,
         }
       );
 

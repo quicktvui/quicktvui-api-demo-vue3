@@ -1,13 +1,8 @@
 <template>
-  <div class="es-sdk-root-css" :clipChildren="true">
+  <div class="es-sdk-root-css">
     <s-title-view class="es-sdk-content-title-css" :text="this.$options.name"/>
     <div class="es-sdk-content-divider-css"/>
     <div class="es-sdk-content-column-css" :clipChildren="true" style="height: 1080px;">
-      <div class="es-sdk-content-row-css">
-        <s-text-button text="设置PivotX" @onButtonClicked="setPivotX"/>
-        <s-text-button text="设置PivotY" @onButtonClicked="setPivotY"/>
-        <s-text-button text="重置Pivot" @onButtonClicked="resetPivot"/>
-      </div>
       <div class="es-sdk-content-row-css">
         <s-text-button text="创建并开始2参动画" @onButtonClicked="initTwo"/>
         <s-text-button text="创建并开始3参动画" @onButtonClicked="initThree"/>
@@ -22,152 +17,140 @@
         <s-text-button text="恢复10参动画" @onButtonClicked="resumeAnimator"/>
         <s-text-button text="取消10参动画" @onButtonClicked="cancelAnimator"/>
       </div>
-      <es-animation
-        ref="animation_view"
+      <qt-animation
+        ref="animationRef"
         class="animation-view-css">
         <div class="animation-inner-view-css"/>
-      </es-animation>
+      </qt-animation>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-
-import {defineComponent, ref} from "@vue/runtime-core";
-import {ESAnimationPropertyName, ESAnimationValueType, ESIAnimation} from "@extscreen/es3-component";
+import {defineComponent} from "@vue/runtime-core";
+import {ref} from "vue";
 import {useESRouter} from "@extscreen/es3-router";
+import {QTAnimationPropertyName, QTAnimationValueType, QTIAnimation} from "@quicktvui/quicktvui3";
 
 export default defineComponent({
-  name: 'RotationAnimation',
+  name: 'AlphaAnimation',
   setup() {
 
-    const animation_view = ref<ESIAnimation>()
+    const animationRef = ref<QTIAnimation>()
     const router = useESRouter()
 
     function initTwo() {
-      animation_view.value?.objectAnimator2(
+      animationRef.value?.objectAnimator2(
         "2",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
-        30,
+        1,
         1000,
         -1,
         0,
         false,
         false,
       );
-      animation_view.value?.startAnimator("2");
+      animationRef.value?.startAnimator("2");
     }
 
     function initThree() {
-      animation_view.value?.objectAnimator3(
+      animationRef.value?.objectAnimator3(
         "3",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
-        30,
-        60,
+        1,
+        0,
         1000,
         -1,
         0,
         false,
         false,
       );
-      animation_view.value?.startAnimator("3");
+      animationRef.value?.startAnimator("3");
     }
 
     function initFour() {
-      animation_view.value?.objectAnimator4(
+      animationRef.value?.objectAnimator4(
         "4",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
-        30,
-        60,
-        360,
+        1,
+        0,
+        1,
         1000,
         -1,
         0,
         false,
         false,
       );
-      animation_view.value?.startAnimator("4");
+      animationRef.value?.startAnimator("4");
     }
 
     function initN() {
-      animation_view.value?.objectAnimator10(
+      animationRef.value?.objectAnimator10(
         "n",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
-        30,
-        60,
-        360,
+        1,
         0,
-        30,
-        60,
-        360,
-        60,
-        360,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
         10000,
         -1,
         0,
         false,
         false,
       );
-      animation_view.value?.startAnimator("n");
+      animationRef.value?.startAnimator("n");
     }
 
     function startAnimatorDelay() {
-      animation_view.value?.objectAnimator5(
+      animationRef.value?.objectAnimator5(
         "5",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_ROTATION,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
         0,
-        30,
-        60,
-        360,
-        60,
+        1,
+        0,
+        1,
+        0,
         1000,
         -1,
         0,
         false,
         false,
       );
-      animation_view.value?.startAnimatorDelay("5", 2000);
-    }
-
-    function setPivotX() {
-      animation_view.value?.setPivotX(0);
-    }
-
-    function setPivotY() {
-      animation_view.value?.setPivotY(200);
-    }
-
-    function resetPivot() {
-      animation_view.value?.resetPivot();
+      animationRef.value?.startAnimatorDelay("5", 2000);
     }
 
     function reverseAnimator() {
-      animation_view.value?.reverseAnimator("n");
+      animationRef.value?.reverseAnimator("n");
     }
 
     function pauseAnimator() {
-      animation_view.value?.pauseAnimator("n");
+      animationRef.value?.pauseAnimator("n");
     }
 
     function resumeAnimator() {
-      animation_view.value?.resumeAnimator("n");
+      animationRef.value?.resumeAnimator("n");
     }
 
     function cancelAnimator() {
-      animation_view.value?.cancelAnimator("n");
+      animationRef.value?.cancelAnimator("n");
     }
 
     function resetAnimators() {
-      animation_view.value?.resetAnimators();
+      animationRef.value?.resetAnimators();
     }
 
     function onBackPressed() {
@@ -176,15 +159,12 @@ export default defineComponent({
     }
 
     return {
-      animation_view,
+      animationRef,
       initTwo,
       initThree,
       initFour,
       initN,
       startAnimatorDelay,
-      setPivotX,
-      setPivotY,
-      resetPivot,
       reverseAnimator,
       pauseAnimator,
       resumeAnimator,
@@ -197,5 +177,5 @@ export default defineComponent({
 
 </script>
 
-<style src="./css/es-animation-css.css">
+<style src="./css/qt-animation-css.css">
 </style>

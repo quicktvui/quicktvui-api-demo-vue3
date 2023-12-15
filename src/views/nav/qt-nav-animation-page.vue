@@ -16,14 +16,14 @@
 <script>
 
 import {defineComponent} from "@vue/runtime-core";
-import ESAnimationPageList from "../../components/es-animation/index.js";
+import QTAnimationPageList from "../../components/qt-animation";
 
 export default defineComponent({
-  name: '动画',
+  name: 'QTAnimation',
   setup() {
-    const pageList = Object.keys(ESAnimationPageList).map(data => ({
+    const pageList = Object.keys(QTAnimationPageList).map(data => ({
       id: data,
-      name: ESAnimationPageList[data].name,
+      name: QTAnimationPageList[data].name,
     }))
 
     return {

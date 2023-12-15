@@ -22,14 +22,13 @@ import ESRangeSeekbarPageList from "./components/es-component/range-seek-bar";
 import ESProgressBarComponentList from "./components/es-component/progress-bar";
 import ESSeekBarComponentList from "./components/es-component/seek-bar";
 import ESX5WebViewComponentList from "./components/es-component/x5web-view";
-import ESAnimationPageList from "./components/es-animation";
+import QTAnimationPageList from "./components/qt-animation";
 import ESVideoPlayerPageList from "./components/es-video-player";
 import ESPlayerManagerPageList from "./components/es-player-manager";
 import ESADPlayerPageList from "./components/es-ad-player";
 import ESAudioPlayerPageList from "./components/es-audio-player";
 import ESAudioServicePlayerPageList from "./components/es-audio-service-player";
 import ESSoundPoolPlayerPageList from "./components/es-sound-pool-player"
-import ESGameCenterPageList from "./components/es-game-center"
 //
 import QTButtonPageList from "./components/qt-button"
 import QTGridViewPageList from "./components/qt-grid-view"
@@ -211,12 +210,7 @@ const routes = [
       name: `${item}`,
       component: ESSeekBarComponentList[item].component,
     })),
-  ...Object.keys(ESAnimationPageList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESAnimationPageList[item].component,
-    })),
+
   ...Object.keys(ESVideoPlayerPageList)
     .map(item => ({
       path: `/${item}`,
@@ -252,12 +246,6 @@ const routes = [
       path: `/${item}`,
       name: `${item}`,
       component: ESPlayerManagerPageList[item].component,
-    })),
-  ...Object.keys(ESGameCenterPageList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESGameCenterPageList[item].component,
     })),
   ...Object.keys(QTViewPageList)
     .map(item => ({
@@ -367,6 +355,12 @@ const routes = [
       path: `/${item}`,
       name: `${item}`,
       component: QTClassifiedListViewPageList[item].component,
+    })),
+  ...Object.keys(QTAnimationPageList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: QTAnimationPageList[item].component,
     })),
 ]
 

@@ -12,11 +12,11 @@
         <s-text-button text="Reverse" @onButtonClicked="reverseMode"/>
         <s-text-button text="Infinite" @onButtonClicked="infiniteMode"/>
       </div>
-      <es-animation
+      <qt-animation
         ref="animation_view"
         class="animation-view-css">
         <div class="animation-inner-view-css"/>
-      </es-animation>
+      </qt-animation>
     </div>
   </div>
 </template>
@@ -25,33 +25,34 @@
 
 import {defineComponent} from "@vue/runtime-core";
 import {ref} from "vue";
-import {
-  ESAnimationPropertyName,
-  ESAnimationRepeatMode,
-  ESAnimationValueType,
-  ESIAnimation
-} from "@extscreen/es3-component";
+
 import {useESRouter} from "@extscreen/es3-router";
+import {
+  QTAnimationPropertyName,
+  QTAnimationRepeatMode,
+  QTAnimationValueType,
+  QTIAnimation
+} from "@quicktvui/quicktvui3";
 
 export default defineComponent({
   name: 'AnimationRepeat',
   setup() {
 
-    const animation_view = ref<ESIAnimation>()
+    const animation_view = ref<QTIAnimation>()
     const router = useESRouter()
 
     function restartMode() {
       animation_view.value?.objectAnimator5(
         "AnimationRestartRepeatMode",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         300,
         0,
         -300,
         0,
         1000,
-        ESAnimationRepeatMode.ES_ANIMATION_REPEAT_MODE_RESTART,
+        QTAnimationRepeatMode.QT_ANIMATION_REPEAT_MODE_RESTART,
         2,
         false,
         false,
@@ -62,15 +63,15 @@ export default defineComponent({
     function reverseMode() {
       animation_view.value?.objectAnimator5(
         "AnimationReverseRepeatMode",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         300,
         0,
         -300,
         0,
         1000,
-        ESAnimationRepeatMode.ES_ANIMATION_REPEAT_MODE_REVERSE,
+        QTAnimationRepeatMode.QT_ANIMATION_REPEAT_MODE_REVERSE,
         2,
         false,
         false,
@@ -81,15 +82,15 @@ export default defineComponent({
     function infiniteMode() {
       animation_view.value?.objectAnimator5(
         "AnimationRepeatInfinite",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
         0,
         300,
         0,
         -300,
         0,
         1000,
-        ESAnimationRepeatMode.ES_ANIMATION_REPEAT_MODE_RESTART,
+        QTAnimationRepeatMode.QT_ANIMATION_REPEAT_MODE_RESTART,
         -1,
         false,
         false,
@@ -119,5 +120,5 @@ export default defineComponent({
 
 </script>
 
-<style src="./css/es-animation-css.css">
+<style src="./css/qt-animation-css.css">
 </style>

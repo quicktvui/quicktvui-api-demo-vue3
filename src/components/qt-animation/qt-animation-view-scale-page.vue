@@ -17,11 +17,11 @@
         <s-text-button text="恢复10参动画" @onButtonClicked="resumeAnimator"/>
         <s-text-button text="取消10参动画" @onButtonClicked="cancelAnimator"/>
       </div>
-      <es-animation
+      <qt-animation
         ref="animation_view"
         class="animation-view-css">
         <div class="animation-inner-view-css"/>
-      </es-animation>
+      </qt-animation>
     </div>
   </div>
 </template>
@@ -31,20 +31,20 @@
 import {defineComponent} from "@vue/runtime-core";
 import {ref} from "vue";
 import {useESRouter} from "@extscreen/es3-router";
-import {ESAnimationPropertyName, ESAnimationValueType, ESIAnimation} from "@extscreen/es3-component";
+import {QTAnimationPropertyName, QTAnimationValueType, QTIAnimation} from "@quicktvui/quicktvui3";
 
 export default defineComponent({
   name: 'ScaleAnimation',
   setup() {
 
-    const animation_view = ref<ESIAnimation>()
+    const animation_view = ref<QTIAnimation>()
     const router = useESRouter()
 
     function initTwo() {
       animation_view.value?.objectAnimator2(
         "2",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         1000,
@@ -59,8 +59,8 @@ export default defineComponent({
     function initThree() {
       animation_view.value?.objectAnimator3(
         "3",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         2,
@@ -76,8 +76,8 @@ export default defineComponent({
     function initFour() {
       animation_view.value?.objectAnimator4(
         "4",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         2,
@@ -94,8 +94,8 @@ export default defineComponent({
     function initN() {
       animation_view.value?.objectAnimator10(
         "n",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         2,
@@ -118,8 +118,8 @@ export default defineComponent({
     function startAnimatorDelay() {
       animation_view.value?.objectAnimator5(
         "5",//自定义id
-        ESAnimationValueType.ES_ANIMATION_VALUE_TYPE_FLOAT,
-        ESAnimationPropertyName.ES_ANIMATION_PROPERTY_NAME_SCALE_X,
+        QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
+        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
         0,
         1.5,
         2,
@@ -178,5 +178,5 @@ export default defineComponent({
 
 </script>
 
-<style src="./css/es-animation-css.css">
+<style src="./css/qt-animation-css.css">
 </style>
