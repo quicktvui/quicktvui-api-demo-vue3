@@ -34,7 +34,7 @@
     "@extscreen/es3-audio-player": "0.0.5",
     "@extscreen/es3-audio-service-player": "0.0.5",
     "@extscreen/es3-game-center": "0.0.2",
-    "@quicktvui/quicktvui3": "1.0.0"
+    "@quicktvui/quicktvui3": "1.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",

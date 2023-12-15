@@ -23,7 +23,6 @@ import qt_nav_bar_page from './qt-nav-bar-page.vue';
 import qt_nav_waterfall_page from './qt-nav-waterfall-page.vue';
 import qt_nav_tabs_waterfall_page from './qt-nav-tabs-waterfall-page.vue';
 import qt_classified_list_view_page from './qt-classified-list-view-page.vue';
-import text_view_page from './text-view-page.vue';
 import qt_nav_webview_page from './qt-nav-webview-page.vue';
 import qt_nav_x5webview_page from './qt-nav-x5webview-page.vue';
 import qt_nav_qrcode_page from './qt-nav-qrcode-page.vue';
@@ -64,10 +63,6 @@ export const QTComponentNavPageList = {
   qt_nav_button_page: {
     name: 'QTButton',
     component: qt_nav_button_page,
-  },
-  text_view_page: {
-    name: 'TextView',
-    component: text_view_page,
   },
   qt_nav_animation_page: {
     name: 'QTAnimation',
