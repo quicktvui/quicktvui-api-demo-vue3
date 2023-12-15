@@ -12,5 +12,5 @@
 
 ### Release模式打包
 
-`npm run vendor`
+`npm run vendor`        
 `npm run build`
