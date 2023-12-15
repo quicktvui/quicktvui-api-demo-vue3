@@ -7,7 +7,7 @@
         <s-nav-button
           v-for="(item, _) in pageList" :key="item.id"
           :text="item.name"
-          :url="`${item.id}`"/>
+          :url="`x5webview/${item.id}`"/>
       </div>
     </div>
   </div>
@@ -16,14 +16,14 @@
 <script>
 
 import {defineComponent} from "@vue/runtime-core";
-import ESBaseComponentList from "../../components/es-base-component";
+import QTX5WebViewComponentList from "./index";
 
 export default defineComponent({
-  name: '基础组件',
+  name: 'qt-x5web-view',
   setup() {
-    const pageList = Object.keys(ESBaseComponentList).map(data => ({
+    const pageList = Object.keys(QTX5WebViewComponentList).map(data => ({
       id: data,
-      name: ESBaseComponentList[data].name,
+      name: QTX5WebViewComponentList[data].name,
     }))
 
     return {

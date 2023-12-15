@@ -7,6 +7,7 @@ import {createESApp} from "@extscreen/es3-core";
 import './views/css/es-sdk-css.css';
 import './views/css/quick-ui-css.css';
 import './components/qt-animation/css/qt-animation-css.css';
+import './components/qt-seek-bar/css/qt-seek-bar-css.css';
 
 const routerOptions = {
   main: 'splash',

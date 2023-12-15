@@ -6,8 +6,6 @@ import ESRouterESList from "./components/es-router/es";
 import ESComponentList from "./components/es-component";
 import ESLoadingViewComponentList from "./components/es-component/loading-view";
 import ESWebViewComponentList from "./components/es-component/web-view";
-import ESBaseComponentList from "./components/es-base-component";
-import ESComponentImgPageList from "./components/es-base-component/img";
 import ESFlexDirectionPageList from "./components/es-flex/direction";
 import ESFlexWrapPageList from "./components/es-flex/wrap";
 import ESFlexJustifyContentPageList from "./components/es-flex/justify-content";
@@ -22,7 +20,6 @@ import ESRangeSeekbarPageList from "./components/es-component/range-seek-bar";
 import ESProgressBarComponentList from "./components/es-component/progress-bar";
 import ESSeekBarComponentList from "./components/es-component/seek-bar";
 import ESX5WebViewComponentList from "./components/es-component/x5web-view";
-import QTAnimationPageList from "./components/qt-animation";
 import ESVideoPlayerPageList from "./components/es-video-player";
 import ESPlayerManagerPageList from "./components/es-player-manager";
 import ESADPlayerPageList from "./components/es-ad-player";
@@ -41,6 +38,13 @@ import QTViewPageList from "./components/qt-view"
 import QTTextPageList from "./components/qt-text"
 import QTImagePageList from "./components/qt-image"
 import TextViewPageList from "./components/text-view"
+import QTLoadingPageList from "./components/qt-loading"
+import QTAnimationPageList from "./components/qt-animation"
+import QTWebViewComponentList from "./components/qt-web-view"
+import QTX5WebViewComponentList from "./components/qt-x5web-view"
+import QTQRCodePageList from "./components/qt-qr-code"
+import QTProgressBarPageList from "./components/qt-progress-bar"
+import QTSeekBarPageList from "./components/qt-seek-bar"
 
 import {
   QTComponentNavPageList,
@@ -119,18 +123,6 @@ const routes = [
       path: `/${item}`,
       name: `${item}`,
       component: ESX5WebViewComponentList[item].component,
-    })),
-  ...Object.keys(ESBaseComponentList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESBaseComponentList[item].component,
-    })),
-  ...Object.keys(ESComponentImgPageList)
-    .map(item => ({
-      path: `/${item}`,
-      name: `${item}`,
-      component: ESComponentImgPageList[item].component,
     })),
   ...Object.keys(ESFlexDirectionPageList)
     .map(item => ({
@@ -343,7 +335,6 @@ const routes = [
       name: `${item}`,
       component: QTTabsWaterfallSectionPageList[item].component,
     })),
-
   ...Object.keys(QTTabsWaterfallItemPageList)
     .map(item => ({
       path: `/${item}`,
@@ -356,11 +347,47 @@ const routes = [
       name: `${item}`,
       component: QTClassifiedListViewPageList[item].component,
     })),
+  ...Object.keys(QTLoadingPageList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: QTLoadingPageList[item].component,
+    })),
   ...Object.keys(QTAnimationPageList)
     .map(item => ({
       path: `/${item}`,
       name: `${item}`,
       component: QTAnimationPageList[item].component,
+    })),
+  ...Object.keys(QTWebViewComponentList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: QTWebViewComponentList[item].component,
+    })),
+  ...Object.keys(QTX5WebViewComponentList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: QTX5WebViewComponentList[item].component,
+    })),
+  ...Object.keys(QTQRCodePageList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: QTQRCodePageList[item].component,
+    })),
+  ...Object.keys(QTSeekBarPageList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: QTSeekBarPageList[item].component,
+    })),
+  ...Object.keys(QTProgressBarPageList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: QTProgressBarPageList[item].component,
     })),
 ]
 

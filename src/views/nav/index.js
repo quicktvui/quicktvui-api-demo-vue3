@@ -1,14 +1,9 @@
-import es_nav_start_page from './es-nav-start-page';
 import es_nav_router_page from './es-nav-router-page';
-import es_nav_component_page from './es-nav-component-page';
-import es_nav_base_component_page from './es-nav-base-component-page';
-import es_nav_flex_page from './es-nav-flex-page';
 import es_nav_lifecycle_page from './es-nav-lifecycle-page';
-import es_nav_module_page from './es-nav-module-page';
 import es_nav_log_page from './es-nav-log-page';
 import es_nav_key_page from './es-nav-key-page';
 import es_nav_network_page from './es-nav-network-page';
-import es_nav_animation_page from './qt-nav-animation-page';
+import qt_nav_animation_page from './qt-nav-animation-page';
 import es_nav_video_player_page from './es-nav-video-player-page';
 import es_nav_ad_player_page from './es-nav-ad-player-page';
 import es_nav_player_manager_page from './es-nav-player-manager-page';
@@ -29,6 +24,13 @@ import qt_nav_waterfall_page from './qt-nav-waterfall-page.vue';
 import qt_nav_tabs_waterfall_page from './qt-nav-tabs-waterfall-page.vue';
 import qt_classified_list_view_page from './qt-classified-list-view-page.vue';
 import text_view_page from './text-view-page.vue';
+import qt_nav_webview_page from './qt-nav-webview-page.vue';
+import qt_nav_x5webview_page from './qt-nav-x5webview-page.vue';
+import qt_nav_qrcode_page from './qt-nav-qrcode-page.vue';
+import qt_nav_progress_bar_page from './qt-nav-progress-bar-page.vue';
+import qt_nav_seek_bar_page from './qt-nav-seek-bar-page.vue'
+import qt_nav_loading_page from './qt-nav-loading-page.vue';
+import qt_nav_dialog_page from './qt-nav-dialog-page.vue';
 
 export const QTComponentNavPageList = {
   qt_nav_view_page: {
@@ -51,6 +53,14 @@ export const QTComponentNavPageList = {
     name: 'QTColumn',
     component: qt_nav_column_page,
   },
+  qt_nav_loading_page: {
+    name: 'QTLoading',
+    component: qt_nav_loading_page,
+  },
+  qt_nav_dialog_page: {
+    name: 'QTDialog',
+    component: qt_nav_dialog_page,
+  },
   qt_nav_button_page: {
     name: 'QTButton',
     component: qt_nav_button_page,
@@ -58,6 +68,30 @@ export const QTComponentNavPageList = {
   text_view_page: {
     name: 'TextView',
     component: text_view_page,
+  },
+  qt_nav_animation_page: {
+    name: 'QTAnimation',
+    component: qt_nav_animation_page,
+  },
+  qt_nav_webview_page: {
+    name: 'QTWebView',
+    component: qt_nav_webview_page,
+  },
+  qt_nav_x5webview_page: {
+    name: 'QTX5WebView',
+    component: qt_nav_x5webview_page,
+  },
+  qt_nav_qrcode_page: {
+    name: 'QTQRCode',
+    component: qt_nav_qrcode_page,
+  },
+  qt_nav_progress_bar_page: {
+    name: 'QTProgressBar',
+    component: qt_nav_progress_bar_page,
+  },
+  qt_nav_seek_bar_page: {
+    name: 'QTSeekBar',
+    component: qt_nav_seek_bar_page,
   },
   qt_grid_view_page: {
     name: 'QTGridView',
@@ -86,10 +120,6 @@ export const QTComponentNavPageList = {
   qt_classified_list_view_page: {
     name: 'QTClassifiedListView',
     component: qt_classified_list_view_page,
-  },
-  es_nav_animation_page: {
-    name: 'QTAnimation',
-    component: es_nav_animation_page,
   },
   es_nav_sound_pool_player_page: {
     name: 'SoundPool播放器',

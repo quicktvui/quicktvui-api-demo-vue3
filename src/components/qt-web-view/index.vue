@@ -7,7 +7,7 @@
         <s-nav-button
           v-for="(item, _) in pageList" :key="item.id"
           :text="item.name"
-          :url="`component/img/${item.id}`"/>
+          :url="`webview/${item.id}`"/>
       </div>
     </div>
   </div>
@@ -16,14 +16,14 @@
 <script>
 
 import {defineComponent} from "@vue/runtime-core";
-import ESComponentImgPageList from "./index";
+import ESWebViewComponentList from "./index";
 
 export default defineComponent({
-  name: 'img',
+  name: 'qt-web-view',
   setup() {
-    const pageList = Object.keys(ESComponentImgPageList).map(data => ({
+    const pageList = Object.keys(ESWebViewComponentList).map(data => ({
       id: data,
-      name: ESComponentImgPageList[data].name,
+      name: ESWebViewComponentList[data].name,
     }))
 
     return {
