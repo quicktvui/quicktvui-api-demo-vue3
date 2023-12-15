@@ -18,7 +18,7 @@ import {ref} from "vue";
 import {QTIX5WebView} from "@quicktvui/quicktvui3";
 
 export default defineComponent({
-  name: 'es-x5web-view-sample',
+  name: '使用初探',
   setup() {
     const webview = ref<QTIX5WebView>()
 
