@@ -11,6 +11,7 @@ import ESFlexAlignContentPageList from "./components/es-flex/align-content";
 import ESPageLifecycleList from "./components/es-lifecycle";
 import ESModulePageList from "./components/es-module";
 import ESLogPageList from "./components/es-log";
+import ESFocusPageList from "./components/es-focus";
 import ESKeyPageList from "./components/es-key";
 import ESNetworkPageList from "./components/es-network";
 import ESVideoPlayerPageList from "./components/es-video-player";
@@ -147,6 +148,12 @@ const routes = [
       path: `/${item}`,
       name: `${item}`,
       component: ESLogPageList[item].component,
+    })),
+  ...Object.keys(ESFocusPageList)
+    .map(item => ({
+      path: `/${item}`,
+      name: `${item}`,
+      component: ESFocusPageList[item].component,
     })),
   ...Object.keys(ESKeyPageList)
     .map(item => ({

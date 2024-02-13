@@ -1,4 +1,5 @@
-import es_nav_router_page from './es-nav-router-page';
+import es_nav_router_page from './es-nav-router-page.vue';
+import es_focus_page from './es-focus-page.vue';
 import es_nav_lifecycle_page from './es-nav-lifecycle-page';
 import es_nav_log_page from './es-nav-log-page';
 import es_nav_key_page from './es-nav-key-page';
@@ -153,6 +154,10 @@ export const QTFrameworkNavPageList = {
   es_nav_router_page: {
     name: '页面路由',
     component: es_nav_router_page,
+  },
+  es_focus_page: {
+    name: '焦点',
+    component: es_focus_page,
   },
   es_nav_log_page: {
     name: '日志',
