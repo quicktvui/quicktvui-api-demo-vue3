@@ -4,12 +4,10 @@
     <div class="es-sdk-content-divider-css"/>
     <qt-row>
       <div class="inner_div_content">
-        <s-text-button text="可获焦1"  />
         <s-text-button text="点击改变v-show List 0" @onButtonClicked="onChangeVisibleButtonClick(1)" />
-        <s-text-button text="点击改变v-if List 0" @onButtonClicked="onChangeVisibleButtonClick(2)" />
+        <s-text-button text="点击改变List 0 ,重设数据" @onButtonClicked="onChangeVisibleButtonClick(2)" />
         <s-text-button text="点击改变scroll List 0" @onButtonClicked="onChangeVisibleButtonClick(3)" />
         <s-text-button text="点击改变scroll List 0,不请求焦点" @onButtonClicked="onChangeVisibleButtonClick(4)" />
-        <s-text-button text="点击改变root v-show" @onButtonClicked="onChangeVisibleButtonClick(5)" />
       </div>
       <div class="inner_div_content">
         <s-text-button text="点击改变v-show List 1" @onButtonClicked="onChangeVisibleButtonClick(6)" />
@@ -17,14 +15,16 @@
       <div class="inner_div_content_div" v-show="vShowVisible">
         <qt-list-view class="inner_div_content_list"
                       v-if="vIFVisible"
-                      :autofocusPosition="autofocusPosition"
+                      :initPosition="initPosition"
                       ref="listRef">
 <!--          -->
+<!--          :initPosition="initPosition"-->
           <s-text-button-template :type="1"/>
         </qt-list-view>
       </div>
       <div class="inner_div_content_div" v-show="vShowVisible2">
         <qt-list-view class="inner_div_content_list"
+                      :initPosition="initPosition2"
                       v-if="vIFVisible2"
                       ref="listRef2">
           <s-text-button-template :type="1" autofocus="${autofocus}"/>
@@ -53,25 +53,39 @@ export default defineComponent({
   setup() {
     const log = useESLog()
     const vShowVisible = ref(true)
-    const vShowVisible2 = ref(false)
+    const vShowVisible2 = ref(true)
     const vAllShow = ref(true)
     const vIFVisible = ref(true)
     const vIFVisible2 = ref(true)
     const visibleVisible = ref(false)
     const autofocus = ref(false)
     const autofocusPosition = ref(8)
+    const scrollOffset = ref(0)
+    let times = 0
+    const initPosition = ref({
+      scrollToPosition:7,
+      focusPosition:7,
+      alignCenter:true,
+    })
+    const initPosition2 = ref({
+      scrollToPosition:8,
+    })
     const listRef = ref<QTIListView>()
     const listRef2 = ref<QTIListView>()
     let listReactive : Array<QTListViewItem> | undefined = []
     function onChangeVisibleButtonClick(type:number){
       if(type == 1){
         vShowVisible.value = !vShowVisible.value
+      }else if(type == 2){
+        setupList(0)
       }else if(type == 3){
         //visibleVisible.value = !visibleVisible.value
-        autofocusPosition.value = 3
-        nextTick(()=>{
-          listRef.value?.scrollToPosition(3)
-        })
+        //autofocusPosition.value = 3
+        // nextTick(()=>{
+        //   listRef.value?.scrollToPosition(2)
+        // })
+        initPosition.value.scrollToPosition = 16
+        initPosition.value.focusPosition = 16
       }else if(type == 2){
         autofocus.value = true
         vIFVisible.value = !vIFVisible.value
@@ -81,7 +95,7 @@ export default defineComponent({
       }else if(type == 4){
         autofocusPosition.value = -1
         nextTick(()=>{
-          listRef.value?.scrollToPosition(3)
+          listRef.value?.scrollToPosition(2)
         })
       }else if(type == 5){
         vAllShow.value = !vAllShow.value
@@ -103,13 +117,14 @@ export default defineComponent({
         let item : QTListViewItem = {
           type:1,
           sid:`item-${i}`,
-          text:`${type}-item-${i}`,
+          text:`${type}-item-${i}-${times}`,
           autofocus:false
         }
         list.push(item)
       }
+      times++
       //index为5的节点获得自动获得焦点
-      list[5].autofocus = true
+      //list[5].autofocus = true
       nextTick(() => {
         if(type == 0){
           listReactive = listRef?.value?.init(list)
@@ -121,8 +136,8 @@ export default defineComponent({
     }
 
     return {
-      onChangeVisibleButtonClick,listReactive,autofocusPosition,listRef2,vShowVisible2,
-      vShowVisible,vIFVisible,visibleVisible,autofocus,listRef,vAllShow,vIFVisible2
+      onChangeVisibleButtonClick,listReactive,autofocusPosition,listRef2,vShowVisible2,initPosition,initPosition2,
+      vShowVisible,vIFVisible,visibleVisible,autofocus,listRef,vAllShow,vIFVisible2,scrollOffset
     }
   },
 });
