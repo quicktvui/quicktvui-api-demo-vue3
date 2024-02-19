@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const HippyDynamicImportPlugin = require('@hippy/hippy-dynamic-import-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const {VueLoaderPlugin} = require('vue-loader');
+const WebpackLifeWatchPlugin = require('./webpack_watch.js')
 
 const pkg = require('../package.json');
 let cssLoader = '@hippy/vue-css-loader';
@@ -57,6 +58,7 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new WebpackLifeWatchPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
