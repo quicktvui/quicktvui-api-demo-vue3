@@ -1,7 +1,11 @@
 # [QuickTVUI](http://v3.quicktvui.com/)
+[![License](https://img.shields.io/badge/license-Apache2.0-blue.svg)](https://opensource.org/licenses/apache-2-0)
+[![vue version](https://img.shields.io/badge/@quicktvui/quicktvui3-latest-green.svg)](https://www.npmjs.com/package/@quicktvui/quicktvui3?activeTab=versions)
+
 QuickTVUI的api-demo，方便快速了解组件及模块提供的能力
 
-![image](https://github.com/quicktvui/quicktvui-api-demo-vue3/assets/11962446/fba93cee-b07b-4841-97d7-a655622c9a5c)
+![Uploading image.png…]()
+
 
 
 ## 快速开始
