@@ -1,6 +1,8 @@
 # [QuickTVUI](http://v3.quicktvui.com/)
 QuickTVUI的api-demo，方便快速了解组件及模块提供的能力
 
+![image](https://github.com/quicktvui/quicktvui-api-demo-vue3/assets/11962446/fba93cee-b07b-4841-97d7-a655622c9a5c)
+
 
 ## 快速开始
 ### 调试
