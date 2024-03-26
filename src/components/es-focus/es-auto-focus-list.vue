@@ -17,7 +17,7 @@
       <div class="inner_div_content_div" v-show="vShowVisible">
         <qt-list-view class="inner_div_content_list"
                       v-if="vIFVisible"
-                      :autofocusPosition="autofocusPosition"
+                      :autoscroll="[autofocusPosition,390]"
                       ref="listRef">
 <!--          -->
           <s-text-button-template :type="1"/>
@@ -53,7 +53,7 @@ export default defineComponent({
   setup() {
     const log = useESLog()
     const vShowVisible = ref(true)
-    const vShowVisible2 = ref(false)
+    const vShowVisible2 = ref(true)
     const vAllShow = ref(true)
     const vIFVisible = ref(true)
     const vIFVisible2 = ref(true)
@@ -68,10 +68,10 @@ export default defineComponent({
         vShowVisible.value = !vShowVisible.value
       }else if(type == 3){
         //visibleVisible.value = !visibleVisible.value
-        autofocusPosition.value = 3
-        nextTick(()=>{
-          listRef.value?.scrollToPosition(3)
-        })
+        autofocusPosition.value = 96
+        // nextTick(()=>{
+        //   listRef.value?.scrollToPosition(3)
+        // })
       }else if(type == 2){
         autofocus.value = true
         vIFVisible.value = !vIFVisible.value

@@ -59,6 +59,7 @@ const props = defineProps({
   text-align: center;
   text-align-vertical: center;
   focus-color: #fff;
+  select-color: red;
 }
 
 </style>

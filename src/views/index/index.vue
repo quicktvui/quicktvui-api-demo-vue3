@@ -2,6 +2,7 @@
   <qt-view class="es-sdk-root-css">
     <qt-waterfall
       ref="waterfallRef"
+      :autofocusPosition="0"
       class="es-sdk-qt-waterfall-css"
       @onItemClick="onItemClick">
       <template v-slot:item>

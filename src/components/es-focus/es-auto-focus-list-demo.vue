@@ -8,26 +8,40 @@
         <s-text-button text="点击改变List 0 ,重设数据" @onButtonClicked="onChangeVisibleButtonClick(2)" />
         <s-text-button text="点击改变scroll List 0" @onButtonClicked="onChangeVisibleButtonClick(3)" />
         <s-text-button text="点击改变scroll List 0,不请求焦点" @onButtonClicked="onChangeVisibleButtonClick(4)" />
+
       </div>
       <div class="inner_div_content">
+        <s-text-button text="点击改变autoSelectPosition" @onButtonClicked="onChangeVisibleButtonClick(5)" />
         <s-text-button text="点击改变v-show List 1" @onButtonClicked="onChangeVisibleButtonClick(6)" />
+        <s-text-button text="点击改变List 1 ,重设数据" @onButtonClicked="onChangeVisibleButtonClick(7)" />
       </div>
       <div class="inner_div_content_div" v-show="vShowVisible">
         <qt-list-view class="inner_div_content_list"
+                      sid="level1"
                       v-if="vIFVisible"
-                      :initPosition="initPosition"
+                      :enableSelectOnFocus="false"
+                      nextFocusRightSID="level2"
+                      :autoscroll="[firstLevelScroll,390]"
+                      :singleSelectPosition="firstLevelSelect"
+                      @item-focused="onItemFocusedLevel1"
                       ref="listRef">
 <!--          -->
 <!--          :initPosition="initPosition"-->
-          <s-text-button-template :type="1"/>
+          <s-text-button-template :type="1" eventFocus/>
         </qt-list-view>
       </div>
       <div class="inner_div_content_div" v-show="vShowVisible2">
         <qt-list-view class="inner_div_content_list"
-                      :initPosition="initPosition2"
+                      sid="level2"
+                      nextFocusLeftSID="level1"
+                      :enableSelectOnFocus="false"
+                      @item-focused="onItemFocusedLevel2"
                       v-if="vIFVisible2"
+                      :autofocusPosition="autofocusPosition"
+                      :autoscroll="[secondLevelScroll,390]"
+                      :singleSelectPosition="secondLevelSelect"
                       ref="listRef2">
-          <s-text-button-template :type="1" autofocus="${autofocus}"/>
+          <s-text-button-template :type="2" autofocus="${autofocus}" eventFocus/>
         </qt-list-view>
       </div>
     </qt-row>
@@ -59,9 +73,27 @@ export default defineComponent({
     const vIFVisible2 = ref(true)
     const visibleVisible = ref(false)
     const autofocus = ref(false)
-    const autofocusPosition = ref(8)
+    //一级滚动定位位置
+    const firstLevelScroll = ref(8)
+    //二级滚动定位位置
+    const secondLevelScroll = ref(-1)
+    //一级选中位置
+    const firstLevelSelect = ref(8)
+    const secondLevelSelect = ref(250)
+
+    const autofocusPosition = ref(240)
+    const autoScrollPosition = ref(8)
+
     const scrollOffset = ref(0)
+    const autoSelectPosition = ref(9)
     let times = 0
+
+    let pageSize = 30
+
+    let firstLevelCount = 20;
+
+    //let currentLevel1 = -1;
+
     const initPosition = ref({
       scrollToPosition:7,
       focusPosition:7,
@@ -73,24 +105,62 @@ export default defineComponent({
     const listRef = ref<QTIListView>()
     const listRef2 = ref<QTIListView>()
     let listReactive : Array<QTListViewItem> | undefined = []
+
+    function onItemFocusedLevel2(e){
+      if(e.isFocused){
+        let pos = e.position
+        let levelPos = Math.floor(pos / pageSize)
+        secondLevelScroll.value = pos
+        log.e('ZHAO','onItemFocused2 pos:'+pos+",levelPos:"+levelPos)
+        firstLevelScroll.value = levelPos
+        firstLevelSelect.value = levelPos
+      }
+    }
+
+    function onItemFocusedLevel1(e){
+
+      if(e.isFocused){
+        let pos = e.position
+        // let randomNum = Math.floor(Math.random() * 80);
+        //console.log(randomNum);
+        //打开列表定位的位置
+        // autofocusPosition.value = pos
+
+        firstLevelSelect.value = pos
+        //一级定位的问题
+        firstLevelScroll.value = pos
+        //二级定位的位置
+        let level2ToFirst = pos * pageSize
+        let level2ToLast = level2ToFirst + pageSize -1 ;
+        log.e('ZHAO','1 onItemFocused pos:'+pos+",level2ToFirst:"+level2ToFirst+",level2ToLast:"+level2ToLast+",secondLevelScroll:"+secondLevelScroll.value)
+        if(secondLevelScroll.value > level2ToLast || secondLevelScroll.value < level2ToFirst){
+            //如果当前列表已经在当前分类下，则不需要再滚动列表
+          secondLevelScroll.value = level2ToFirst
+        }
+        log.e('ZHAO','2 onItemFocused pos:'+pos+",firstLevelSelect:"+firstLevelScroll.value+",secondLevelScroll:"+secondLevelScroll.value)
+      }
+      // autofocusPosition.value =
+    }
     function onChangeVisibleButtonClick(type:number){
       if(type == 1){
+        // if(vShowVisible.value){
+        //   // firstLevelScroll.value = -1
+        // }
+        if(!vShowVisible.value){
+          firstLevelScroll.value = 13
+        }
         vShowVisible.value = !vShowVisible.value
       }else if(type == 2){
-        setupList(0)
+        setupFirstLevel()
+        firstLevelScroll.value = 8
       }else if(type == 3){
-        //visibleVisible.value = !visibleVisible.value
-        //autofocusPosition.value = 3
-        // nextTick(()=>{
-        //   listRef.value?.scrollToPosition(2)
-        // })
         initPosition.value.scrollToPosition = 16
         initPosition.value.focusPosition = 16
       }else if(type == 2){
         autofocus.value = true
         vIFVisible.value = !vIFVisible.value
         if(vIFVisible.value){
-          setupList(0)
+          setupFirstLevel()
         }
       }else if(type == 4){
         autofocusPosition.value = -1
@@ -98,46 +168,60 @@ export default defineComponent({
           listRef.value?.scrollToPosition(2)
         })
       }else if(type == 5){
-        vAllShow.value = !vAllShow.value
-        setTimeout(()=>{
-          vAllShow.value = true
-        },2000)
+        let randomNum = Math.floor(Math.random() * 80);
+        //console.log(randomNum);
+        autoSelectPosition.value = randomNum
       }else if(type == 6){
         vShowVisible2.value = !vShowVisible2.value
+      }else if(type == 7){
+        setupSecondLevel()
       }
     }
 
-    setupList(0)
-    setupList(1)
+    setupFirstLevel()
+    setupSecondLevel()
 
-    function setupList(type:number){
+    function  setupSecondLevel(){
       let list :Array<QTListViewItem> = []
       let i = 0;
-      for(i = 0; i < 100;i ++){
+      let levelCount = pageSize * firstLevelCount;
+      for(i = 0; i < levelCount;i ++){
+        let item : QTListViewItem = {
+          type:2,
+          sid:`item-${i}`,
+          text:`二级--${i}`,
+          autofocus:false
+        }
+        list.push(item)
+      }
+      nextTick(() => {
+          listRef2?.value?.init(list)
+      })
+    }
+
+    function setupFirstLevel(){
+      let list :Array<QTListViewItem> = []
+      let i = 0;
+      for(i = 0; i < firstLevelCount;i ++){
         let item : QTListViewItem = {
           type:1,
           sid:`item-${i}`,
-          text:`${type}-item-${i}-${times}`,
+          text:`一级--${i}`,
           autofocus:false
         }
         list.push(item)
       }
       times++
-      //index为5的节点获得自动获得焦点
-      //list[5].autofocus = true
       nextTick(() => {
-        if(type == 0){
           listReactive = listRef?.value?.init(list)
-        }else if(type == 1){
-          listRef2?.value?.init(list)
-        }
-
       })
     }
 
     return {
       onChangeVisibleButtonClick,listReactive,autofocusPosition,listRef2,vShowVisible2,initPosition,initPosition2,
-      vShowVisible,vIFVisible,visibleVisible,autofocus,listRef,vAllShow,vIFVisible2,scrollOffset
+      vShowVisible,vIFVisible,visibleVisible,autofocus,listRef,vAllShow,vIFVisible2,scrollOffset,autoSelectPosition,
+      onItemFocusedLevel1,onItemFocusedLevel2,autoScrollPosition,firstLevelScroll, secondLevelScroll,
+      firstLevelSelect,secondLevelSelect
     }
   },
 });
