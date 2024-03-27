@@ -1,7 +1,7 @@
 # [QuickTVUI](http://v3.quicktvui.com/)
 QuickTVUI的api-demo，方便快速了解组件及模块提供的能力
 
-
+![img.png](.resource/intro.png)
 ## 快速开始
 ### 调试
 #### 1. 确认编译环境
