@@ -14,6 +14,7 @@
         <s-text-button text="点击改变autoSelectPosition" @onButtonClicked="onChangeVisibleButtonClick(5)" />
         <s-text-button text="点击改变v-show List 1" @onButtonClicked="onChangeVisibleButtonClick(6)" />
         <s-text-button text="点击改变List 1 ,重设数据" @onButtonClicked="onChangeVisibleButtonClick(7)" />
+        <s-text-button text="点击改变List 1 v-if 重设数据" @onButtonClicked="onChangeVisibleButtonClick(8)" />
       </div>
       <div class="inner_div_content_div" v-show="vShowVisible">
         <qt-list-view class="inner_div_content_list"
@@ -91,6 +92,7 @@ export default defineComponent({
     let pageSize = 30
 
     let firstLevelCount = 20;
+
 
     //let currentLevel1 = -1;
 
@@ -175,6 +177,14 @@ export default defineComponent({
         vShowVisible2.value = !vShowVisible2.value
       }else if(type == 7){
         setupSecondLevel()
+      }else if(type == 8){
+        vIFVisible2.value = !vIFVisible2.value
+        nextTick(() => {
+          if(listRef2){
+            setupSecondLevel()
+          }
+        })
+
       }
     }
 
@@ -182,6 +192,8 @@ export default defineComponent({
     setupSecondLevel()
 
     function  setupSecondLevel(){
+      // listRef2?.value?.init([])
+      times
       let list :Array<QTListViewItem> = []
       let i = 0;
       let levelCount = pageSize * firstLevelCount;
@@ -189,14 +201,18 @@ export default defineComponent({
         let item : QTListViewItem = {
           type:2,
           sid:`item-${i}`,
-          text:`二级--${i}`,
+          text:`二级--${i}-${times}`,
           autofocus:false
         }
         list.push(item)
       }
-      nextTick(() => {
+      setTimeout(()=>{
+        nextTick(() => {
           listRef2?.value?.init(list)
-      })
+        })
+      },300)
+      times++
+
     }
 
     function setupFirstLevel(){
