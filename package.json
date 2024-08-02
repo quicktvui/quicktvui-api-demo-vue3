@@ -1,6 +1,8 @@
 {
-  "name": "quicktvui-vue3",
-  "version": "2.0.0",
+  "name": "@quicktvui/api-demo",
+  "version": "2.0.1",
+  "appName": "api-demo",
+  "icon": "./src/assets/logo.png",
   "description": "A Demo Example For Hippy-Vue-Next Library To Show.",
   "private": true,
   "nativeMain": "./src/main-native.ts",
