@@ -1,4 +1,4 @@
-# [QuickTVUI](http://v3.quicktvui.com/)
+# [QuickTVUI](https://quicktvui.com/)
 QuickTVUI的api-demo，方便快速了解组件及模块提供的能力
 
 ![img.png](.resource/intro.png)
@@ -27,12 +27,9 @@ npm run dev
 #### 5. 打开运行Runtime apk，查看效果
 点击下图加载测试代码
 ![image](https://github.com/quicktvui/hellotv/assets/11962446/4571fb02-b761-405e-bbc8-a6baaa6f8a4a)
->> 注意这里电脑调试地址要改成你电脑本机ip
-```bash
-adb shell am broadcast -a  com.extscreen.runtime.ACTION_CHANGE_DEBUG_SERVER --es ip 192.168.xx.xx(电脑IP地址)
-```
-关于adb等其它配置具体说明请查看 <u>[配置运行环境](http://developer.extscreen.com/guide/) </u>
+
+关于adb等其它配置具体说明请查看 <u>[配置运行环境](https://quicktvui.com/zh-CN/guide/basic/quick-start.html) </u>
 
 最后看到加载出页面，表示完成调试，即可随时修改源码查看效果。
 
-更多信息请参考[QuickTVUI](http://v3.quicktvui.com/)
+更多信息请参考 [QuickTVUI](https://quicktvui.com/)
