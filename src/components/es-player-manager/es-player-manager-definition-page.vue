@@ -5,10 +5,18 @@
       :initPlayerWindowType="2"
       :playerList="playerListRef"
       @onPlayerPlayMedia="onPlayerPlayMedia"
+      @onPlayerPlaying="onPlayerPlaying"
       @onPlayerDefinitionListChanged="onPlayerDefinitionListChanged"
       @onPlayerDefinitionChanged="onPlayerDefinitionChanged"
       class="es-video-player-manager-page-css"/>
     <s-title-view class="es-sdk-content-title-css" :text="this.$options.name"/>
+    <div class="es-sdk-content-divider-css"/>
+    <div class="es-sdk-content-row-css">
+      <span class="es-player-manager-text-css" text="总时长："/>
+      <span class="es-player-manager-text-css" :text="duration + '' "/>
+      <span class="es-player-manager-text-css" text="当前进度："/>
+      <span class="es-player-manager-text-css" :text="progress + '' "/>
+    </div>
     <div class="es-sdk-content-divider-css"/>
     <div class="es-sdk-content-row-css">
       <span class="es-player-manager-text-css" text="清晰度列表："/>
@@ -43,7 +51,7 @@ import {ESPlayerDefinition} from "@extscreen/es3-player";
 const TAG = 'ESVideoPlayerManagerPage'
 
 export default defineComponent({
-  name: '画面比例',
+  name: '清晰度',
   components: {
     'es-player-manager': ESPlayerManager,
   },
@@ -61,6 +69,11 @@ export default defineComponent({
     const playerListRef = ref(playerList)
 
     let isPaused = false
+
+    const duration = ref(0)
+    const progress = ref(0)
+    let durationTimer = null
+    let progressTimer = null
 
     function onPlayerPlayMedia(mediaItem: ESMediaItem) {
       if (log.isLoggable(ESLogLevel.DEBUG)) {
@@ -107,19 +120,19 @@ export default defineComponent({
           index: 0,
           list: [{
             definition: ESPlayerDefinition.ES_PLAYER_DEFINITION_SD,
-            uri: 'http://qcloudcdn.a311.ottcn.com/data_center/videos/SHORT/DEFAULT/2022/10/27/d4e29cbf-5b15-4523-b9c8-80f18fa76275.mp4'
+            uri: 'http://extcdn.hsrc.tv/channelzero/2024/02/05/d477660a-3eb6-4c7f-b82b-0b61c035505c.mp4'
           },
             {
               definition: ESPlayerDefinition.ES_PLAYER_DEFINITION_HD,
-              uri: 'http://qcloudcdn.a311.ottcn.com/data_center/videos/SHORT/DEFAULT/2022/01/27/85a658d6-d0ce-4721-adea-f8e2e0b263a7.mp4'
+              uri: 'http://extcdn.hsrc.tv/channelzero/2024/02/05/d477660a-3eb6-4c7f-b82b-0b61c035505c.mp4'
             },
             {
               definition: ESPlayerDefinition.ES_PLAYER_DEFINITION_FULL_HD,
-              uri: 'http://qcloudcdn.a311.ottcn.com/data_center/videos/SHORT/DEFAULT/2023/09/17/22edb94d-8ffc-4736-a633-3f9e38c096e8.mp4'
+              uri: 'http://extcdn.hsrc.tv/channelzero/2024/02/05/d477660a-3eb6-4c7f-b82b-0b61c035505c.mp4'
             },
             {
               definition: ESPlayerDefinition.ES_PLAYER_DEFINITION_FOURK,
-              uri: 'http://qcloudcdn.a311.ottcn.com/data_center/videos/LIB/VARIETY/2022/03/10/2877b7e1-fda6-4591-aff3-3fd3ba4151cf_transcode_1137855.mp4'
+              uri: 'http://extcdn.hsrc.tv/channelzero/2024/02/05/d477660a-3eb6-4c7f-b82b-0b61c035505c.mp4'
             }]
         },
       }
@@ -129,6 +142,8 @@ export default defineComponent({
         list: [mediaItem_0]
       }
       playerManager.value?.initialize()
+      playerManager.value?.setDurationCallback(durationCallback)
+      playerManager.value?.setProgressCallback(progressCallback)
       playerManager.value?.playMediaList(playList)
     }
     const onESResume = () => {
@@ -141,12 +156,68 @@ export default defineComponent({
     const onESPause = () => {
       log.e(TAG, "-------onESPause---------->>>>>")
       isPaused = true;
-      playerManager.value?.stop()
+      stop()
     }
     const onESDestroy = () => {
       log.e(TAG, "-------onESDestroy---------->>>>>")
       playerManager.value?.release()
     }
+
+    //---------------------------------------------------
+    function stop() {
+      stopDurationTimer()
+      stopProgressTimer()
+      playerManager.value?.stop()
+    }
+
+    function durationCallback(d: number) {
+      duration.value = d
+    }
+
+    function progressCallback(p: number) {
+      progress.value = p
+    }
+
+    function startDurationTimer() {
+      stopDurationTimer()
+      durationTimer = setInterval(() => {
+        if (log.isLoggable(ESLogLevel.DEBUG)) {
+          log.e(TAG, "-------getDuration---------->>>>>")
+        }
+        playerManager.value?.getDuration()
+      }, 500);
+    }
+
+    function stopDurationTimer() {
+      if (durationTimer) {
+        clearInterval(durationTimer);
+      }
+    }
+
+    function startProgressTimer() {
+      stopProgressTimer()
+      progressTimer = setInterval(() => {
+        if (log.isLoggable(ESLogLevel.DEBUG)) {
+          log.e(TAG, "-------getCurrentPosition---------->>>>>")
+        }
+        playerManager.value?.getCurrentPosition()
+      }, 500);
+    }
+
+    function stopProgressTimer() {
+      if (progressTimer) {
+        clearInterval(progressTimer);
+      }
+    }
+
+    const onPlayerPlaying = () => {
+      if (log.isLoggable(ESLogLevel.DEBUG)) {
+        log.e(TAG, "----PlayerEvent---onPlayerPlaying---------->>>>>")
+      }
+      startDurationTimer()
+      startProgressTimer()
+    }
+
 
     return {
       playingMediaIndex,
@@ -165,6 +236,10 @@ export default defineComponent({
       onPlayerPlayMedia,
       onPlayerDefinitionListChanged,
       onPlayerDefinitionChanged,
+      //
+      onPlayerPlaying,
+      duration,
+      progress
     }
   },
 });
