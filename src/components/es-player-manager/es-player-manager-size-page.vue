@@ -2,7 +2,7 @@
   <div class="es-sdk-root-css">
     <es-player-manager
       ref="playerManager"
-      :initPlayerWindowType="2"
+      :initPlayerWindowType="1"
       :playerList="playerListRef"
       class="es-video-player-manager-page-css"/>
     <s-title-view class="es-sdk-content-title-css" :text="this.$options.name"/>
@@ -60,7 +60,7 @@ export default defineComponent({
       }
       isPaused = false
       let mediaSource: ESMediaSource = {
-        uri: 'http://qcloudcdn.a311.ottcn.com/data_center/videos/SHORT/DEFAULT/2023/08/25/7d3623ae-c002-4929-b5a2-fe10bca06bfc.mp4'
+        uri: 'http://extcdn.hsrc.tv/channelzero/2024/02/05/d477660a-3eb6-4c7f-b82b-0b61c035505c.mp4'
       }
       let mediaSourceList: ESMediaSourceList = {
         index: 0,

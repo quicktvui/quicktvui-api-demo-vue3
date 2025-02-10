@@ -10,6 +10,7 @@ import es_video_player_decode_page_page from './es-video-player-decode-page';
 import es_video_player_definition_page_page from './es-video-player-definition-page';
 import es_video_player_progress_page from './es-video-player-progress-page';
 import es_video_player_type_page_page from './es-video-player-type-page';
+import es_video_player_size_page_page from './es-video-player-size-page';
 
 const ESVideoPlayerPageList = {
   es_video_player_start_page: {
@@ -59,6 +60,10 @@ const ESVideoPlayerPageList = {
   es_video_player_definition_page_page: {
     name: '清晰度',
     component: es_video_player_definition_page_page,
+  },
+  es_video_player_size_page_page: {
+    name: '播放尺寸切换',
+    component: es_video_player_size_page_page,
   },
 };
 export default ESVideoPlayerPageList;
