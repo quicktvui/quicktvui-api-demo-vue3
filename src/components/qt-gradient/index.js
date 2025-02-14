@@ -11,15 +11,15 @@ const QTGradientPageList = {
     component: qt_gradient_start_page,
   },
   qt_gradient_type_page: {
-    name: 'GradientType',
+    name: 'Type',
     component: qt_gradient_type_page,
   },
   qt_gradient_shape_page: {
-    name: 'GradientShape',
+    name: 'Shape',
     component: qt_gradient_shape_page,
   },
   qt_gradient_orientation_page: {
-    name: 'GradientOrientation',
+    name: 'Orientation',
     component: qt_gradient_orientation_page,
   },
   qt_gradient_corner_radius_page: {
@@ -27,7 +27,7 @@ const QTGradientPageList = {
     component: qt_gradient_corner_radius_page,
   },
   qt_gradient_corner_radii4_page: {
-    name: 'cornerRadii4',
+    name: 'CornerRadii4',
     component: qt_gradient_corner_radii4_page,
   }
 };
