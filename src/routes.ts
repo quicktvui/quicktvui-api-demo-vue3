@@ -65,6 +65,7 @@ import QTAPIPageList from "./components/qt-api";
 import QTSwiperPageList from "./components/qt-swiper";
 import QTLottiePageList from "./components/qt-lottie";
 import QTIndicatorPageList from "./components/qt-indicator-list-view";
+import QTGradientPageList from "./components/qt-gradient";
 
 import {
   QTWaterfallPageList,
@@ -327,6 +328,12 @@ const routes = [
       path: `/div/${item}`,
       name: `div/${item}`,
       component: QTDivPageList[item].component,
+    })),
+  ...Object.keys(QTGradientPageList)
+    .map(item => ({
+      path: `/gradient/${item}`,
+      name: `gradient/${item}`,
+      component: QTGradientPageList[item].component,
     })),
   ...Object.keys(QTViewPageList)
     .map(item => ({

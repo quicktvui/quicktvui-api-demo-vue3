@@ -53,6 +53,7 @@ import qt_nav_swiper_page from './qt-nav-swiper-page.vue'
 import qt_nav_lottie_page from './qt-nav-lottie-page.vue'
 import qt_indicator_list_view_page from './qt-nav-indicator-list-view-page.vue'
 import qt_nav_module_page from './qt-nav-module-page';
+import qt_nav_gradient_page from './qt-nav-gradient-page';
 
 export const QTComponentNavPageList = {
   qt_nav_div_page: {
@@ -178,6 +179,10 @@ export const QTComponentNavPageList = {
   qt_nav_lottie_page: {
     name: 'QTLottie',
     component: qt_nav_lottie_page,
+  },
+  qt_nav_gradient_page: {
+    name: 'QTGradient',
+    component: qt_nav_gradient_page,
   },
   // qt_indicator_list_view_page: {
   //   name: 'QTIndicatorListView',
