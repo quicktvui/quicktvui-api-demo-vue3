@@ -37,6 +37,7 @@ import es_slot_suspend from "./components/es-slot/es-slot-suspend.vue"
 //##################################### JSView ###################################################
 
 //----------------------------------------------------------------------------------
+import QTDivPageList from "./components/div"
 import QTButtonPageList from "./components/qt-button"
 import QTGridViewPageList from "./components/qt-grid-view"
 import QTListViewPageList from "./components/qt-list-view"
@@ -321,6 +322,12 @@ const routes = [
       component: ESSlotPageList[item].component,
     })),
   //----------------------------------------------------------------------------------------------
+  ...Object.keys(QTDivPageList)
+    .map(item => ({
+      path: `/div/${item}`,
+      name: `div/${item}`,
+      component: QTDivPageList[item].component,
+    })),
   ...Object.keys(QTViewPageList)
     .map(item => ({
       path: `/view/${item}`,

@@ -19,6 +19,8 @@ import es_nav_eventbus_page from './es-nav-eventbus-page';
 import es_nav_ul_page from './es-nav-ul-page';
 import es_nav_component_page from './es-nav-component-page';
 import es_nav_utils_page from './es-nav-utils-page';
+
+import qt_nav_div_page from './qt-nav-div-page';
 import qt_nav_view_page from './qt-nav-view-page.vue';
 import qt_nav_text_page from './qt-nav-text-page.vue';
 import qt_nav_image_page from './qt-nav-image-page.vue';
@@ -53,6 +55,10 @@ import qt_indicator_list_view_page from './qt-nav-indicator-list-view-page.vue'
 import qt_nav_module_page from './qt-nav-module-page';
 
 export const QTComponentNavPageList = {
+  qt_nav_div_page: {
+    name: 'div',
+    component: qt_nav_div_page,
+  },
   qt_nav_view_page: {
     name: 'QTView',
     component: qt_nav_view_page,
