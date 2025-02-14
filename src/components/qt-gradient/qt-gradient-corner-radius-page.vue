@@ -3,15 +3,15 @@
     <s-title-view class="es-sdk-content-title-css" :text="this.$options.name"/>
     <div class="es-sdk-content-divider-css"/>
     <qt-row class="qt-sdk-content-row-css">
-      <qt-view class="qt-sdk-content-item-css"
+      <qt-view class="qt-sdk-content-item-radius-css"
                :gradientBackground="{type: 0, shape: 0, cornerRadius:5, colors: ['#ff0000', '#00ff00']}">
         <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="CornerRadius：5"/>
       </qt-view>
-      <qt-view class="qt-sdk-content-item-css"
+      <qt-view class="qt-sdk-content-item-radius-css"
                :gradientBackground="{type: 0, shape: 0, cornerRadius:10, colors: ['#ff0000', '#00ff00']}">
         <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="CornerRadius：10"/>
       </qt-view>
-      <qt-view class="qt-sdk-content-item-css"
+      <qt-view class="qt-sdk-content-item-radius-css"
                :gradientBackground="{type: 0, shape: 0, cornerRadius:20, colors: ['#ff0000', '#00ff00']}">
         <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="CornerRadius：20"/>
       </qt-view>
@@ -35,7 +35,7 @@ export default defineComponent({
   justify-content: center;
 }
 
-.qt-sdk-content-item-css {
+.qt-sdk-content-item-radius-css {
   width: 250px;
   height: 200px;
   align-items: center;

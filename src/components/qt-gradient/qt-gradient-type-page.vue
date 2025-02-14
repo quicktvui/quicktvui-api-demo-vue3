@@ -3,15 +3,15 @@
     <s-title-view class="es-sdk-content-title-css" :text="this.$options.name"/>
     <div class="es-sdk-content-divider-css"/>
     <qt-row class="qt-sdk-content-row-css">
-      <qt-view class="qt-sdk-content-item-css"
+      <qt-view class="qt-sdk-content-item-type-css"
                :gradientBackground="{type: 0, shape: 0, colors: ['#ff0000', '#00ff00']}">
         <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="LINEAR"/>
       </qt-view>
-      <qt-view class="qt-sdk-content-item-css"
+      <qt-view class="qt-sdk-content-item-type-css"
                :gradientBackground="{type: 1, shape: 0,colors: ['#ff0000', '#00ff00']}">
         <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="RADIAL"/>
       </qt-view>
-      <qt-view class="qt-sdk-content-item-css"
+      <qt-view class="qt-sdk-content-item-type-css"
                :gradientBackground="{type: 2, shape: 0,colors: ['#ff0000', '#00ff00']}">
         <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="SWEEP"/>
       </qt-view>
@@ -35,7 +35,7 @@ export default defineComponent({
   justify-content: center;
 }
 
-.qt-sdk-content-item-css {
+.qt-sdk-content-item-type-css {
   width: 200px;
   height: 200px;
   align-items: center;

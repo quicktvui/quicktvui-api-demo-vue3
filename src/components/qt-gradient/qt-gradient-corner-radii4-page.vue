@@ -5,15 +5,15 @@
     <qt-row class="qt-sdk-content-row-css">
       <qt-view class="qt-sdk-content-item-css"
                :gradientBackground="{type: 0, shape: 0, cornerRadii4: [30,30,30,30], colors: ['#ff0000', '#00ff00']}">
-        <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="cornerRadii4: [30,30,30,30]"/>
+        <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="CornerRadii4: [30,30,30,30]"/>
       </qt-view>
       <qt-view class="qt-sdk-content-item-css"
                :gradientBackground="{type: 0, shape: 0, cornerRadii4: [10,30,20,0], colors: ['#ff0000', '#00ff00']}">
-        <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="cornerRadii4: [10,30,20,0]"/>
+        <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="CornerRadii4: [10,30,20,0]"/>
       </qt-view>
       <qt-view class="qt-sdk-content-item-css"
                :gradientBackground="{type: 0, shape: 0, cornerRadii4: [10,0,30,5], colors: ['#ff0000', '#00ff00']}">
-        <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="cornerRadii4: [10,0,30,5]"/>
+        <qt-text class="qt-sdk-content-item-text-css" gravity='center' text="CornerRadii4: [10,0,30,5]"/>
       </qt-view>
     </qt-row>
   </div>
