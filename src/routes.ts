@@ -47,6 +47,7 @@ import QTRowPageList from "./components/qt-row"
 import QTColumnPageList from "./components/qt-column"
 import QTViewPageList from "./components/qt-view"
 import QTTextPageList from "./components/qt-text"
+import QTImgPageList from "./components/img"
 import QTImagePageList from "./components/qt-image"
 import TextViewPageList from "./components/text-view"
 import QTLoadingPageList from "./components/qt-loading"
@@ -346,6 +347,12 @@ const routes = [
       path: `/text/${item}`,
       name: `text/${item}`,
       component: QTTextPageList[item].component,
+    })),
+  ...Object.keys(QTImgPageList)
+    .map(item => ({
+      path: `/img/${item}`,
+      name: `img/${item}`,
+      component: QTImgPageList[item].component,
     })),
   ...Object.keys(QTImagePageList)
     .map(item => ({

@@ -21,6 +21,7 @@ import es_nav_component_page from './es-nav-component-page';
 import es_nav_utils_page from './es-nav-utils-page';
 
 import qt_nav_div_page from './qt-nav-div-page';
+import qt_nav_img_page from './qt-nav-img-page';
 import qt_nav_view_page from './qt-nav-view-page.vue';
 import qt_nav_text_page from './qt-nav-text-page.vue';
 import qt_nav_image_page from './qt-nav-image-page.vue';
@@ -67,6 +68,10 @@ export const QTComponentNavPageList = {
   qt_nav_text_page: {
     name: 'QTText',
     component: qt_nav_text_page,
+  },
+  qt_nav_img_page: {
+    name: 'img',
+    component: qt_nav_img_page,
   },
   qt_nav_image_page: {
     name: 'QTImage',
