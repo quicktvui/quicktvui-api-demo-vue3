@@ -53,15 +53,15 @@ export default defineComponent({
   width: 800px;
   height: 150px;
   margin: 15px;
-  color: black;
-  background-color: darkgray;
+  color: #5096f7;
+  background-color: #f5f7fa;
 }
 
 .qt-text-gravity-page .qt-text-center {
   width: 1630px;
   height: 150px;
   margin: 15px;
-  color: black;
-  background-color: darkgray;
+  color: #5096f7;
+  background-color: #f5f7fa;
 }
 </style>

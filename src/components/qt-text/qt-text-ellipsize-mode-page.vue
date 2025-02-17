@@ -57,15 +57,15 @@ export default defineComponent({
   width: 800px;
   height: 60px;
   margin: 15px;
-  color: black;
-  background-color: darkgray;
+  color: #5096f7;
+  background-color: #f5f7fa;
 }
 
 .qt-text-ellipsize-mode-page .qt-text {
   width: 600px;
   height: 60px;
   margin: 15px;
-  color: black;
-  background-color: darkgray;
+  color: #5096f7;
+  background-color: #f5f7fa;
 }
 </style>
