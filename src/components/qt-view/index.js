@@ -5,6 +5,7 @@ import qt_view_focus_background_page from './qt-view-focus-background-page';
 import qt_view_background_page from './qt-view-background-page';
 import qt_view_gradient_background_page from './qt-view-gradient-background-page';
 import qt_view_border_page from './qt-view-border-page';
+import qt_view_background_img_page from './qt-view-background-img-page';
 
 const QTViewPageList = {
   qt_view_start_page: {
@@ -30,6 +31,10 @@ const QTViewPageList = {
   qt_view_gradient_background_page: {
     name: '渐变背景色',
     component: qt_view_gradient_background_page,
+  },
+  qt_view_background_img_page: {
+    name: '背景图片',
+    component: qt_view_background_img_page,
   },
   qt_view_border_page: {
     name: '边框',

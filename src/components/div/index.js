@@ -5,6 +5,7 @@ import div_focus_background from './div-focus-background';
 import div_background_page from './div-background-page';
 import div_gradient_background_page from './div-gradient-background-page';
 import div_border_page from './div-border-page';
+import div_background_img_page from './div-background-img-page';
 
 const QTDivPageList = {
   div_basic_page: {
@@ -30,6 +31,10 @@ const QTDivPageList = {
   div_gradient_background_page: {
     name: '渐变背景色',
     component: div_gradient_background_page,
+  },
+  div_background_img_page: {
+    name: '背景图片',
+    component: div_background_img_page,
   },
   div_border_page: {
     name: '边框',
