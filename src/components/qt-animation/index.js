@@ -1,3 +1,4 @@
+import qt_animation_view_basic_page from './qt-animation-view-basic-page';
 import qt_animation_view_alpha_page from './qt-animation-view-alpha-page';
 import qt_animation_view_scale_page from './qt-animation-view-scale-page';
 import qt_animation_view_translation_page from './qt-animation-view-translation-page';
@@ -9,6 +10,10 @@ import qt_animation_view_interpolator_page from './qt-animation-view-interpolato
 import qt_animation_view_repeat_page from './qt-animation-view-repeat-page';
 
 const QTAnimationPageList = {
+  qt_animation_view_basic_page: {
+    name: qt_animation_view_basic_page.name,
+    component: qt_animation_view_basic_page,
+  },
   qt_animation_view_alpha_page: {
     name: qt_animation_view_alpha_page.name,
     component: qt_animation_view_alpha_page,
