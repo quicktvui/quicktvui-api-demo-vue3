@@ -26,6 +26,11 @@ if (BuildConfig.enableSlotView) {
 }
 
 const app: ESApp = createESApp(application, router);
+app.config.errorHandler = (err, instance, info) => {
+  console.error("❌ Vue Error:", err);
+  console.error("👉 Component instance:", instance);
+  console.error("⚠️ Info:", info);
+};
 
 import {install} from './components';
 
