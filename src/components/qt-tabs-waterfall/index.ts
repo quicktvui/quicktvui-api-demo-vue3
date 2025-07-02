@@ -1,3 +1,4 @@
+import qt_tabs_waterfall_quick_start from "./qt-tabs-waterfall-quick-start.vue"
 import qt_tabs_waterfall_start_page from "./qt-tabs-waterfall-start-page.vue"
 import qt_tabs_waterfall_single_tab_page from "./qt-tabs-waterfall-single-tab-page.vue"
 import qt_tabs_tab_item_page from "./qt-tabs-tab-item-page.vue"
@@ -24,8 +25,12 @@ import qt_tabs_waterfall_plugin_page from "./qt-tabs-waterfall-plugin-page.vue"
 import qt_tabs_waterfall_advanced_page from "./qt-tabs-waterfall-advanced-page.vue"
 
 const QTTabsWaterfallPageList = {
+  qt_tabs_waterfall_quick_start: {
+    name: '快速使用',
+    component: qt_tabs_waterfall_quick_start,
+  },
   qt_tabs_waterfall_start_page: {
-    name: '使用初探',
+    name: '自定接口创建',
     component: qt_tabs_waterfall_start_page,
   },
   qt_tabs_waterfall_single_tab_page: {
