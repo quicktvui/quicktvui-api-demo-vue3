@@ -7,7 +7,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 const WebpackObfuscator = require('webpack-obfuscator')
 const platform = 'android'
 const pkg = require('../package.json')
-let cssLoader = '@hippy/vue-css-loader'
+const cssLoader = "@extscreen/es3-vue-css-loader";
 
 module.exports = {
   mode: 'production',
