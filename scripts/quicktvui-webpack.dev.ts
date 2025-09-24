@@ -60,7 +60,19 @@ module.exports = {
       __VUE_OPTIONS_API__: true,
       __VUE_PROD_DEVTOOLS__: false,
       __PLATFORM__: null,
-      __DEV__: true
+      __DEV__: true,
+
+      __ES_VUE_FEATURE_FLAGS__: {
+        ENABLE_KEY_EVENT_DISPATCH: true,
+        ENABLE_EVENT_BUBBLE: false,
+        ENABLE_MODULES: true,
+      },
+
+      // ESRouter配置
+      __ES_ROUTER_FEATURE_FLAGS__: JSON.stringify({
+        // ROOT_VIEW_COMPONENT_NAME: 'div',
+        // PAGE_VIEW_COMPONENT_NAME: 'div',
+      }),
     }),
     new ESDynamicImportPlugin(),
     new CleanWebpackPlugin()
@@ -131,7 +143,7 @@ module.exports = {
     alias: (() => {
       const aliases = {
         src: path.resolve('./src'),
-        quicktvui: path.resolve('../dist/quicktvui')
+        // quicktvui: path.resolve('../dist/quicktvui')
       }
       return aliases
     })()

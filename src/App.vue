@@ -28,18 +28,19 @@ export default defineComponent({
       return Promise.resolve()
         .then(() => request.init(log))
         .then(() => dataSource.init(request))
-        .then(() => {
-          return playerManager.init({
-            debug: true,
-            display: {
-              screenWidth: device.getScreenWidth(),
-              screenHeight: device.getScreenHeight(),
-            },
-            device: {
-              deviceType: runtime.getRuntimeDeviceType() ?? ''
-            }
-          })
-        })
+        //TODO
+        // .then(() => {
+        //   return playerManager.init({
+        //     debug: true,
+        //     display: {
+        //       screenWidth: device.getScreenWidth(),
+        //       screenHeight: device.getScreenHeight(),
+        //     },
+        //     device: {
+        //       deviceType: runtime.getRuntimeDeviceType() ?? ''
+        //     }
+        //   })
+        // })
     }
 
     return {

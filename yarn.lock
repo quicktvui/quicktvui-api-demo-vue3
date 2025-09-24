@@ -1369,15 +1369,15 @@
   resolved "https://registry.yarnpkg.com/@extscreen/es3-component/-/es3-component-1.0.35.tgz#4d2f64f6a0a9ab2a396fdf093098388149f21ce6"
   integrity sha512-raOfJI5a0dzV47CSZsL7DXmKaLyCcYVbFwm5ZxEum93VCJrHLxK6IZU9TdvP2hXUd12OTarvdAMNPuUO4UdoZA==
 
-"@extscreen/es3-core@1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@extscreen/es3-core/-/es3-core-1.2.2.tgz#dbc3b82498d830114602f717dff56ecd2371410a"
-  integrity sha512-umP5npUxCNbAVlW7iNET5EyKoJ4k3GmsVWmBPrW/bupH9WDsz7YXdX0+g6kNwqWjORiktoihzGAd2M1z1pCbNw==
+"@extscreen/es3-core@3.0.0-alpha.1":
+  version "3.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@extscreen/es3-core/-/es3-core-3.0.0-alpha.1.tgz#7cab8857a2ffbb4b1c0eefbf0b4905ebdec91319"
+  integrity sha512-HCP0g1dANwLUp4sLEWOLptbUVMvw3e+HXoqacxsfz2382rHS5UzJ4t6sZiSKmZ4AWSiHJSqSH/kOIcHOjTLmNA==
 
-"@extscreen/es3-debug-server@0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@extscreen/es3-debug-server/-/es3-debug-server-0.0.1.tgz#d77330eea4bbe35e9b472dacf9ef4c9f623bb6f1"
-  integrity sha512-hYOiCP/xTgXg/wA/79OvwHxLIkepgIUd9hK4OGC17Dx15uzdMqrtrSZ7Dxv/2IQqvPfwoLHhE6hfPX4d3exOCA==
+"@extscreen/es3-debug-server@0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@extscreen/es3-debug-server/-/es3-debug-server-0.0.6.tgz#d295372f96e16b14f531ac593fb9eb37c6dd5562"
+  integrity sha512-NKGcbLrBKl0mo+Z4gcRoP3Qnr1w1vwzu9MJfw2hjXK8MDzwWg9NaacNPBXqAZ13AErzcvvW0TiHsDc8BsWDIyg==
   dependencies:
     "@hippy/chrome-devtools" "^0.1.2"
     "@hippy/chrome-devtools-extensions" "0.5.0"
@@ -1386,7 +1386,7 @@
     "@hippy/hippy-react-devtools-plugin" "^0.1.0"
     "@hippy/hippy-vue-devtools-plugin" "^0.1.0"
     "@hippy/react-devtools" "^0.1.0"
-    "@hippy/vanilla-js-devtools" "^0.1.10"
+    "@hippy/vanilla-js-devtools" "0.1.10"
     "@hippy/vue-devtools" "^0.0.1"
     "@koa/cors" "^3.1.0"
     axios "^0.26.1"
@@ -1448,10 +1448,10 @@
   resolved "https://registry.yarnpkg.com/@extscreen/es3-player/-/es3-player-1.0.25.tgz#d55e1bdf46b9fb3ef3aee60e396fc7921861d411"
   integrity sha512-DCjQHWPtL5IYwfQUXpuKN//6c9F2bcmcjdvTiuLxegAG+LrmRsWS7L252vQOHGkBNfzWda0pvA7YHrNjSLinxw==
 
-"@extscreen/es3-router@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@extscreen/es3-router/-/es3-router-1.2.0.tgz#f432bfa67cf16eb38d1beb3a9c89fe0d6711d506"
-  integrity sha512-sSjpX02gVufaeeTBVV2s5c2YK6rug89hh1nMBY5XKhw1flSkJ8roZHgrXAOgtfllwwU/00nNoubSAEzC1Bs/tQ==
+"@extscreen/es3-router@3.0.0-alpha.1":
+  version "3.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@extscreen/es3-router/-/es3-router-3.0.0-alpha.1.tgz#9de08077d25cbdbc1e67443d0aa454020bafa238"
+  integrity sha512-5cNRIPhtd+4Rapg+dWzUvqMDJWgC1F5pYXDcwmnW28EmRJ+5mnpS26v+bfHAjUYPexYokVn25QmhVsdiEwRavw==
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
@@ -1465,24 +1465,24 @@
   resolved "https://registry.yarnpkg.com/@extscreen/es3-video-player/-/es3-video-player-1.0.38.tgz#75b0cd4e3dfe8de7fa9e6113b97d2664202998a1"
   integrity sha512-3iu6r7fgAtshYov4q0ZPVeTMySUYaEdo5otRFyyBGw228Q9UrToUtM+NtR/Vs4RJ6BAAyaE1KwPJXJaCPBUM0Q==
 
-"@extscreen/es3-vue-css-loader@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@extscreen/es3-vue-css-loader/-/es3-vue-css-loader-2.0.0.tgz#b99564aa95b08fa4abf4721b91cdb4007d27d751"
-  integrity sha512-Nt9fczGT8R2aWLuW1BiKpYMW9dEpdlqJR7jh6fGrydeQX4kfQo/9XvMKUCw2b+d4o2/2zpvIhMKB7S3cWKdyPQ==
+"@extscreen/es3-vue-css-loader@3.0.0-alpha.1":
+  version "3.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@extscreen/es3-vue-css-loader/-/es3-vue-css-loader-3.0.0-alpha.1.tgz#2d8c47d61f7fbd4d8978b556e9c5462d2ace5690"
+  integrity sha512-B2LB+oTmxRLI9/hYsh+jrY7JOYDSvDMDYUuzkvD5dOfeGcgrzHKCOUo5EomOqW7veA2/FzhpKrc4v2Dp2S/bjg==
   dependencies:
     loader-utils "^1.4.1"
 
-"@extscreen/es3-vue-style-parser@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@extscreen/es3-vue-style-parser/-/es3-vue-style-parser-2.0.0.tgz#e5909ce25f9819950c0a2130d1d5314efb89a0c7"
-  integrity sha512-4ZWBnaOewH8M7di7WE1SfU8hNIFR4uOHna0sYf9/qvYL1klk/WdrcHzEXSVZfkMah1iu7hPvbSDNb9eXR7E78w==
+"@extscreen/es3-vue-style-parser@3.0.0-alpha.1":
+  version "3.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@extscreen/es3-vue-style-parser/-/es3-vue-style-parser-3.0.0-alpha.1.tgz#f8fd995ebb5a030b7a5b7c5b29d2046f408377e9"
+  integrity sha512-rDeIHqBeyk+lolJCjKpPQUmu0QfFBevOz87YqxP4jkLSR7TVTTi8zczK/D5ON/Q6LHpg2xasbqVgQCmSOqzBWg==
   dependencies:
     "@vue/shared" "^3.2.21"
 
-"@extscreen/es3-vue@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@extscreen/es3-vue/-/es3-vue-2.0.0.tgz#eb2abbbeff210ac46cc4e682e8943a70c1f8d963"
-  integrity sha512-uE+WZEW3sfOgEnZ48lI/oZMX2uTrZIyHmKvxYCi2Hp4Dp7VFDjH8QC3ZtU1S5MB3pj4CN0YAljmi2o2Ra0100g==
+"@extscreen/es3-vue@3.0.0-alpha.4":
+  version "3.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@extscreen/es3-vue/-/es3-vue-3.0.0-alpha.4.tgz#a637162604aad2f4857d4de0c0f6194d1bb2cecf"
+  integrity sha512-VFG8afzd5Ao+r0WD3vSDTRisPOheICRwszMMn855J6CAZJvGTkpaToSbhI9uxxgQv+GhBJR14ExoaXADzh3q6w==
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
@@ -1540,7 +1540,7 @@
   resolved "https://registry.yarnpkg.com/@hippy/rejection-tracking-polyfill/-/rejection-tracking-polyfill-1.0.0.tgz#809759b6dde81a10ae583e2b5e2171703f606ad1"
   integrity sha512-iJ/J+n6kyb1rblB7e563vU1VgXxGTUy8TGzcEACUIOt8VLwnxPZGcHDkYW3SQhUB0YF+9dO6QLCX83iGlQqvSA==
 
-"@hippy/vanilla-js-devtools@^0.1.10":
+"@hippy/vanilla-js-devtools@0.1.10":
   version "0.1.10"
   resolved "https://registry.yarnpkg.com/@hippy/vanilla-js-devtools/-/vanilla-js-devtools-0.1.10.tgz#1480c4503e2fa91f81618f99a8abcfc070423e78"
   integrity sha512-vC2upj3CfO84gESmBL/rckk25b5+O/qCO3R0qVbfS83nk1aZOIpMEqOhDRTdPA5/0vezMjgYsBSHSAl5ApjaWw==
@@ -1708,10 +1708,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@quicktvui/quicktvui3@1.2.0-beta.39":
-  version "1.2.0-beta.39"
-  resolved "https://registry.yarnpkg.com/@quicktvui/quicktvui3/-/quicktvui3-1.2.0-beta.39.tgz#6748b5fa522a1c2bad174722163c99c8dd82d4d7"
-  integrity sha512-9tNWuEQo+7sWcMzVKD8r96xmaxkwl0dRjsdxcfiA4Qe7COHd87WHaSOSFbBbSf0v96DldYlJ/3CFNTlOeOVi4Q==
+"@quicktvui/quicktvui3@1.2.0-beta.61":
+  version "1.2.0-beta.61"
+  resolved "https://registry.yarnpkg.com/@quicktvui/quicktvui3/-/quicktvui3-1.2.0-beta.61.tgz#f958a280c8331e0efaf39d4e2ec413a6cb58de59"
+  integrity sha512-UrvRkn/NQJLEA+HDetBpTtgkQXphVbcBO7qzcPG8NXo64qbeeP8xR5Ydu7Xb4UzcU15FkTxRitRirk/WCYngfw==
 
 "@rollup/plugin-commonjs@^25.0.0":
   version "25.0.7"
